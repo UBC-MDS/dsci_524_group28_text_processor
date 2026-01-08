@@ -15,7 +15,7 @@ You can contribute in many ways, for example:
 
 ### Report Bugs
 
-Report bugs at https://github.com/UBC-MDS/dsci_524_group28_text_processor/issues.
+Report bugs at [here](https://github.com/UBC-MDS/dsci_524_group28_text_processor/issues).
 
 **If you are reporting a bug, please follow the template guidelines. The more
 detailed your report, the easier and thus faster we can help you.**
@@ -48,7 +48,7 @@ to let us know what you will be working on so that we can provide you with guida
 ### Submit Feedback
 
 The best way to send feedback is to file an issue at
-https://github.com/UBC-MDS/dsci_524_group28_text_processor/issues. If your feedback fits the format of one of
+[here](https://github.com/UBC-MDS/dsci_524_group28_text_processor/issues). If your feedback fits the format of one of
 the issue templates, please use that. Remember that this is a volunteer-driven
 project and everybody has limited time.
 
@@ -62,16 +62,21 @@ We use **GitHub Flow** - industry-standard contribution workflow:
 2. Clone your fork locally (*if you want to work locally*)
 
     ```shell
-    git clone git@github.com:your_name_here/text_processor.git
+    git clone git@github.com:your_name_here/dsci_524_group28_text_processo.git
     ```
 
 3. [Install hatch](https://hatch.pypa.io/latest/install/).
 
 4. Create a branch for local development using the default branch (typically `main`) as a starting point. Use `fix` or `feat` as a prefix for your branch name.
+
    Our branch name recommendation: <type>/<short-purpose>-<author>
+      
       type = fix, feat, docs
+      
       short-purpose = purpose of the change
+      
       author = your GitHub username
+   
    Example: docs/update-contributing-guide-vtphan
 
    Then run:
@@ -92,8 +97,10 @@ We use **GitHub Flow** - industry-standard contribution workflow:
     ```
 
 6. Commit your changes and push your branch to GitHub. 
-   - Keep commits small and meaningful.
-   - Use semantic commit messages (https://www.conventionalcommits.org/).
+
+   Keep commits small and meaningful.
+   
+   Use semantic commit messages (https://www.conventionalcommits.org/).
 
     ```shell
     git add .
