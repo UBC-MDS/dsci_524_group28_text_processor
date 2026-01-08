@@ -52,13 +52,13 @@ https://github.com/UBC-MDS/dsci_524_group28_text_processor/issues. If your feedb
 the issue templates, please use that. Remember that this is a volunteer-driven
 project and everybody has limited time.
 
-## Get Started!
+## Git Workflow
 
-Ready to contribute? Here's how to set up Text Processor for
-local development.
+We use **GitHub Flow** - industry-standard contribution workflow:
 
-1. Fork the https://github.com/UBC-MDS/dsci_524_group28_text_processor/issues
-   repository on GitHub.
+1. Fork the repository on GitHub:
+   https://github.com/UBC-MDS/dsci_524_group28_text_processor
+   
 2. Clone your fork locally (*if you want to work locally*)
 
     ```shell
@@ -68,6 +68,13 @@ local development.
 3. [Install hatch](https://hatch.pypa.io/latest/install/).
 
 4. Create a branch for local development using the default branch (typically `main`) as a starting point. Use `fix` or `feat` as a prefix for your branch name.
+   Our branch name recommendation: <type>/<short-purpose>-<author>
+      type = fix, feat, docs
+      short-purpose = purpose of the change
+      author = your GitHub username
+   Example: docs/update-contributing-guide-vtphan
+
+   Then run:
 
     ```shell
     git checkout main
@@ -76,6 +83,7 @@ local development.
 
     Now you can make your changes locally.
 
+
 5. When you're done making changes, apply the quality assurance tools and check
    that your changes pass our test suite. This is all included with tox
 
@@ -83,8 +91,9 @@ local development.
     hatch run test:run
     ```
 
-6. Commit your changes and push your branch to GitHub. Please use [semantic
-   commit messages](https://www.conventionalcommits.org/).
+6. Commit your changes and push your branch to GitHub. 
+   - Keep commits small and meaningful.
+   - Use semantic commit messages (https://www.conventionalcommits.org/).
 
     ```shell
     git add .
@@ -104,3 +113,13 @@ Before you submit a pull request, check that it meets these guidelines:
    new functionality into a function with a docstring.
 3. Your pull request will automatically be checked by the full test suite.
    It needs to pass all of them before it can be considered for merging.
+
+### Merge Rules
+
+1. Only maintainers can merge Pull Request
+2. A PR can only be merged when:
+   - At least 1 approving review is given
+   - Continuous Integration checks passed 
+   - All requested changes are resolved
+3. The contributor branch will be deleted after merge
+4. Force-pushing is not allowed after a PR is opened unless requested by a maintainer
