@@ -48,5 +48,5 @@ To use text-processor in your code:
 
 ## Copyright
 
-- Copyright © 2026 Group 28.
+- Copyright © 2026 Julia Zhang, Vy Phan, Aitong Wu, Christine Chow.
 - Free software distributed under the [MIT License](./LICENSE).
