@@ -3,16 +3,16 @@ A module that reads a text file, replaces all instances of a string
 with another string, the writes the output to a new file.
 """
 
-def text_replace(old_path, new_path, old, new):
+def text_replace(input_path, output_path, old, new):
     """
     Replaces all instances of a string with another string in a text
     file, then writes the result into another file.
     
     Parameters
     ----------
-    old_path : str
+    input_path : str
         The file path to the text file to read.
-    new_path : str
+    output_path : str
         The file path to write the replaced text to.
     old : str
         The string to replace.
