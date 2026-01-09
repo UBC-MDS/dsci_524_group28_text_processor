@@ -126,7 +126,6 @@ Before you submit a pull request, check that it meets these guidelines:
 1. Only maintainers can merge Pull Request
 2. A PR can only be merged when:
    - At least 1 approving review is given
-   - Continuous Integration checks passed 
    - All requested changes are resolved
 3. The contributor branch will be deleted after merge
 4. Force-pushing is not allowed after a PR is opened unless requested by a maintainer
