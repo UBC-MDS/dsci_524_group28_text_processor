@@ -62,14 +62,14 @@ We use **GitHub Flow** - industry-standard contribution workflow:
 2. Clone your fork locally (*if you want to work locally*)
 
     ```shell
-    git clone git@github.com:your_name_here/dsci_524_group28_text_processo.git
+    git clone git@github.com:your_name_here/dsci_524_group28_text_processor.git
     ```
 
 3. [Install hatch](https://hatch.pypa.io/latest/install/).
 
 4. Create a branch for local development using the default branch (typically `main`) as a starting point. Use `fix` or `feat` as a prefix for your branch name.
 
-   Our branch name recommendation: <type>/<short-purpose>-<author>
+   Our branch name recommendation: `<type>/<short-purpose>-<author>`
       
       type = fix, feat, docs
       
