@@ -3,7 +3,7 @@ A module that reads a text file, removes all instances of a string,
 and then writes the output to a new file.
 """
 
-def text_remove(input_path, output_path, string_to_remove):
+def text_remove(input_path: str, output_path: str, string_to_remove: str):
     """
     Removes all instances of a string in a text file, then writes the result into another file.
 

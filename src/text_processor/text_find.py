@@ -1,4 +1,8 @@
-def text_find(input_path: str, keyword str) -> int:
+"""
+A module that reads a text file to locate the first occurrence of a string and returns its character index.
+"""
+
+def text_find(input_path: str, keyword: str) -> int:
     """
     Finds the first instance of a string in a text file.
 

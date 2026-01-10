@@ -1,9 +1,9 @@
 """
 A module that reads a text file, replaces all instances of a string
-with another string, the writes the output to a new file.
+with another string, then writes the output to a new file.
 """
 
-def text_replace(input_path, output_path, old, new):
+def text_replace(input_path: str, output_path: str, old: str, new: str):
     """
     Replaces all instances of a string with another string in a text
     file, then writes the result into another file.
