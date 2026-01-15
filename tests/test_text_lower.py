@@ -1,6 +1,6 @@
 import pytest
 import os
-from dsci_524_group28_text_processor.text_lower import text_lower
+from text_processor.text_lower import text_lower
 
 def test_text_lower_convert():
     """Test that text_lower correctly converts uppercase text to lowercase."""
