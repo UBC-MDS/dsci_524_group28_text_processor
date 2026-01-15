@@ -11,3 +11,4 @@ def output_data():
     with open(file_path, "r") as file:
         lines = file.read()
     return lines
+
