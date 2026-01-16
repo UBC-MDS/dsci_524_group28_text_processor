@@ -13,7 +13,7 @@ from src.text_processor.text_replace import text_replace
 def test_regular_replace(output_data):
     """Test a typical word replace scenario"""
 
-    text_replace("tests/poe.txt", "test/output.txt", "sea", "bee")
+    text_replace("tests/poe.txt", "tests/output.txt", "sea", "bee")
 
     with open("tests/output.txt", "r", encoding='utf-8') as f:
         result = f.read()
@@ -31,6 +31,19 @@ def test_whitespace():
     with open("tests/output.txt", "r", encoding='utf-8') as f:
         result = f.read()
     with open("tests/expected_output/text_replace/whitespace.txt", "r", encoding='utf-8') as f:
+        expected = f.read()
+    
+    assert result == expected
+
+
+def test_case_sensitive():
+    """Check that replacements are case sensitive"""
+
+    text_replace("tests/poe.txt", "tests/output.txt", "In", "On")
+
+    with open("tests/output.txt", "r", encoding='utf-8') as f:
+        result = f.read()
+    with open("tests/expected_output/text_replace/case_sensitive.txt", "r", encoding='utf-8') as f:
         expected = f.read()
     
     assert result == expected
@@ -99,5 +112,14 @@ def test_file_type():
     """Tests that the function throws an error if the input file is not a .txt file"""
 
     with pytest.raises(ValueError, match=".*txt"):
-        text_replace("tests/poe.txt", "tests/output.qmd", "sea", "bee")
-    
+        text_replace("tests/poe.qmd", "tests/output.txt", "sea", "bee")
+
+    with pytest.raises(ValueError, match=".*txt"):
+        text_replace("tests/poe.txt", "tests/output.csv", "sea", "bee")
+
+
+def test_input_file_not_found():
+    """Tests that the function throws an error when the input file doesn't exist"""
+    with pytest.raises(FileNotFoundError):
+        text_replace("tests/dne.txt", "tests/output.txt", "sea", "bee")
+
