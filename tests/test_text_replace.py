@@ -119,4 +119,3 @@ def test_input_file_not_found():
     """Tests that the function throws an error when the input file doesn't exist"""
     with pytest.raises(FileNotFoundError):
         text_replace("tests/dne.txt", "tests/output.txt", "sea", "bee")
-
