@@ -46,10 +46,6 @@ def text_lower(input_path: str, output_path: str):
     # FileNotFoundError exception if input file is not found
     if not os.path.isfile(input_path):
         raise FileNotFoundError(f"The input file '{input_path}' is not found")
-    
-    # FileNotFoundError exception if output file is not found
-    if not os.path.isfile(output_path):
-        raise FileNotFoundError(f"The output file '{output_path}' is not found")
 
     try:
         with open(input_path, 'r', encoding='utf-8') as infile:
