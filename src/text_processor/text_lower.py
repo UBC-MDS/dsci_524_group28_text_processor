@@ -49,12 +49,14 @@ def text_lower(input_path: str, output_path: str):
 
     try:
         with open(input_path, 'r', encoding='utf-8') as infile:
-
             contents = ""
             for line in infile:
                 for char in line:
-                    contents += char.lower()
-
+                    if char.isupper():
+                        contents += char.lower()
+                    else:
+                        contents += char
+                        
             if contents == "":
                 with open(output_path, "w", encoding='utf-8') as outfile:
                     outfile.write("")
