@@ -32,4 +32,43 @@ def text_replace(input_path: str, output_path: str, old: str, new: str):
     # replaced.txt contains the contents of example.txt, but with all
     # instances of 'color' replaced with "colour"
     """
-    pass
+    
+    if not isinstance(input_path, str):
+        raise TypeError("input_path must be a string")
+    if not isinstance(output_path, str):
+        raise TypeError("output_path must be a string")
+    if not isinstance(old, str):
+        raise TypeError("old must be a string")
+    if not isinstance(new, str):
+        raise TypeError("new must be a string")
+    
+    if old == "":
+        raise ValueError("old must be a non-empty string")
+    
+    if not input_path.endswith(".txt"):
+        raise ValueError("input_path must be a .txt file")
+    if not output_path.endswith(".txt"):
+        raise ValueError("output_path must be a .txt file")
+    
+    with open(input_path, "r", encoding="utf-8") as f:
+        input = f.read()
+
+    result = []
+    old_len = len(old)
+    i = 0
+
+    while i < len(input):
+        if input[i:i + old_len] == old:
+            result.append(new)
+            i += old_len
+        else:
+            result.append(input[i])
+            i += 1
+
+
+    with open(output_path, "w") as f:
+        f.write("".join(result))
+
+    return
+
+    
