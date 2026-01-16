@@ -10,7 +10,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 from src.text_processor.text_replace import text_replace
 
 
-def test_regular_replace(output_data):
+def test_regular_replace():
     """Test a typical word replace scenario"""
 
     text_replace("tests/poe.txt", "tests/output.txt", "sea", "bee")
