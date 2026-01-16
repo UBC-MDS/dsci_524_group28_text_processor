@@ -69,7 +69,7 @@ def test_old_dne():
     
     with open("tests/output.txt", "r", encoding='utf-8') as f:
         result = f.read()
-    with open("tests/expected_output/text_replace/input.txt", "r", encoding='utf-8') as f:
+    with open("tests/poe.txt", "r", encoding='utf-8') as f:
         expected = f.read()
     
     assert result == expected
@@ -95,17 +95,14 @@ def test_arg_type():
     with pytest.raises(TypeError):
         text_replace("tests/poe.txt", "tests/output.txt", "sea", 5)
     
-    with pytest.raises(TypeError):
-        text_replace("tests/poe.txt", "tests/output.txt", "sea", "")
-    
-    with pytest.raises(TypeError):
+    with pytest.raises(ValueError):
         text_replace("tests/poe.txt", "tests/output.txt", "", "sea")
     
     with pytest.raises(TypeError):
         text_replace("tests/poe.txt", True, "sea", "")
-    
+
     with pytest.raises(TypeError):
-        text_replace("tests/poe.txt", "tests/output.txt", "sea", "")
+        text_replace(1.5, "tests/output.txt", "sea", "bee")
 
 
 def test_file_type():
