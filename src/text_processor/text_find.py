@@ -1,44 +1,72 @@
 """
-A module that reads a text file to locate the first occurrence of 'keyword' in text and returns its character index.
+A module that reads a text file to locate the first occurrence of 'keyword' in text
+and returns its character index.
 
-Note: The returned index refers to the cleaned (lowercased) text, not the raw
-file text. Because normalization can remove characters/words, indices may not match
-the original file.
+Note: The returned index refers to the text read from the processed file
+(e.g., lowercased / cleaned by earlier steps), not the raw file text.
 """
+
+import os
 import re
+
 
 def text_find(input_path: str, keyword: str) -> int:
     """
     Finds the first whole-word instance of `keyword` in a text file.
 
-    Both file text and keyword are lowercased before searching. Keyword must be
-    a non-empty string containing only letters and spaces (e.g. "anna lee").
+    Keyword rules:
+    - keyword must be a string
+    - keyword cannot be empty/whitespace
+    - keyword may contain spaces
+    - keyword words must contain letters only (Unicode letters allowed, e.g., é, ñ)
 
-    Returns the 0-based character index of the first occurrence in the normalized
-    text, or -1 if not found.
+    Returns:
+    - 0-based character index of the first match in the file text
+    - -1 if not found
 
     Raises
     ------
     TypeError
-        If `keyword` is not a string.
+        If input_path or keyword is not a string.
     ValueError
-        If `keyword` is empty or contains characters other than letters and spaces.
-    FileNotFoundError, PermissionError, IsADirectoryError, UnicodeDecodeError
-        If the file cannot be opened/read as text.
+        If input_path is not a .txt file, or keyword is invalid.
+    FileNotFoundError
+        If the input file does not exist.
+    OSError
+        If there is an error reading the file.
     """
+    # Validate input_path
+    if not isinstance(input_path, str):
+        raise TypeError("input_path must be a string")
+    if not input_path.endswith(".txt"):
+        raise ValueError("input_path must have a .txt file extension")
+    if not os.path.isfile(input_path):
+        raise FileNotFoundError(f"The input file '{input_path}' is not found")
+
+    # Validate keyword type
     if not isinstance(keyword, str):
         raise TypeError("keyword must be a string")
 
-    keyword_norm = keyword.strip().lower()
-    if keyword_norm == "":
+    # Normalize keyword: strip ends, lowercase, collapse whitespace between words
+    tokens = keyword.strip().lower().split()
+    if len(tokens) == 0:
         raise ValueError("keyword must be a non-empty string")
 
-    if not re.fullmatch(r"[A-Za-z ]+", keyword_norm):
-        raise ValueError("keyword must contain only letters and spaces")
+    # Validate: letters only (Unicode-aware)
+    for token in tokens:
+        if not token.isalpha():
+            raise ValueError("keyword must contain only letters and spaces")
 
-    with open(input_path, "r", encoding="utf-8") as f:
-        text = f.read().lower()
+    keyword_norm = " ".join(tokens)
 
+    # Read processed text; lower for safety (doesn't change string length)
+    try:
+        with open(input_path, "r", encoding="utf-8") as f:
+            text = f.read().lower()
+    except OSError as err:
+        raise OSError(f"An error occurred while reading the file: {err}")
+
+    # Exact whole-word match for keyword (supports spaces)
     pattern = r"\b" + re.escape(keyword_norm) + r"\b"
     match = re.search(pattern, text)
     return match.start() if match else -1
