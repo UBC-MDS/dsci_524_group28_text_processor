@@ -2,7 +2,7 @@ import pytest
 from text_processor.text_find import text_find
 
 
-def test_text_find_first_occurrence_from_output_txt(output_data):
+def test_text_find_first_occurrence_from_output_txt():
     """
     Returns the FIRST occurrence index.
     Keyword contains a space.
@@ -13,11 +13,10 @@ def test_text_find_first_occurrence_from_output_txt(output_data):
     with open(input_path, "w", encoding="utf-8") as f:
         f.write(content)
 
-    # "anna lee" begins right after "hello " (6 chars)
     assert text_find(input_path, "anna lee") == 6
 
 
-def test_text_find_exact_match_not_substring(output_data):
+def test_text_find_exact_match_not_substring():
     """
     Exact match only: 'anna' should NOT match inside 'annabelle'.
     """
@@ -29,7 +28,7 @@ def test_text_find_exact_match_not_substring(output_data):
     assert text_find(input_path, "anna") == -1
 
 
-def test_text_find_keyword_with_extra_spaces_normalized(output_data):
+def test_text_find_keyword_with_extra_spaces_normalized():
     """
     Keyword can have extra spaces; we normalize to single spaces.
     """
@@ -38,13 +37,12 @@ def test_text_find_keyword_with_extra_spaces_normalized(output_data):
     with open(input_path, "w", encoding="utf-8") as f:
         f.write("start anna lee end\n")
 
-    # extra spaces in keyword should still match
     assert text_find(input_path, "  anna   lee  ") == 6
 
 
-def test_text_find_unicode_letters_allowed(output_data):
+def test_text_find_unicode_letters_allowed():
     """
-    Allows Unicode letters in keyword (é, ñ, ü).
+    Allows Unicode letters (é, ñ, ü).
     """
     input_path = "tests/output.txt"
 
@@ -54,7 +52,7 @@ def test_text_find_unicode_letters_allowed(output_data):
     assert text_find(input_path, "josé") == 5
 
 
-def test_text_find_not_found_returns_minus_one(output_data):
+def test_text_find_not_found_returns_minus_one():
     input_path = "tests/output.txt"
     with open(input_path, "w", encoding="utf-8") as f:
         f.write("anna lee\n")
@@ -66,7 +64,7 @@ def test_text_find_not_found_returns_minus_one(output_data):
 # Validation tests
 # -----------------------
 
-def test_text_find_keyword_empty_raises(output_data):
+def test_text_find_keyword_empty_raises():
     input_path = "tests/output.txt"
     with open(input_path, "w", encoding="utf-8") as f:
         f.write("anna lee\n")
@@ -75,17 +73,16 @@ def test_text_find_keyword_empty_raises(output_data):
         text_find(input_path, "   ")
 
 
-def test_text_find_keyword_invalid_characters_raises(output_data):
+def test_text_find_keyword_invalid_characters_raises():
     input_path = "tests/output.txt"
     with open(input_path, "w", encoding="utf-8") as f:
         f.write("anna lee\n")
 
-    # hyphen not allowed under "letters + spaces only"
     with pytest.raises(ValueError, match="only letters and spaces"):
         text_find(input_path, "anna-lee")
 
 
-def test_text_find_keyword_not_string_raises(output_data):
+def test_text_find_keyword_not_string_raises():
     input_path = "tests/output.txt"
     with open(input_path, "w", encoding="utf-8") as f:
         f.write("anna lee\n")
