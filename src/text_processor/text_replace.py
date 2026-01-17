@@ -66,7 +66,7 @@ def text_replace(input_path: str, output_path: str, old: str, new: str):
             i += 1
 
 
-    with open(output_path, "w") as f:
+    with open(output_path, "w", encoding="utf-8") as f:
         f.write("".join(result))
 
     return
