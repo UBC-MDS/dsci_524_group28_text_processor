@@ -1,3 +1,8 @@
+"""Unit tests for text_remove.
+
+These tests verify correct whole-word removal behavior and defensive error handling.
+"""
+
 import shutil
 import pytest
 
@@ -5,6 +10,7 @@ from text_processor.text_remove import text_remove
 
 
 def test_text_remove_removes_whole_word_only(tmp_path):
+    """Remove whole-word matches only (e.g., 'the' removed but 'There/other' unchanged)."""
     input_path = tmp_path / "in.txt"
     output_path = tmp_path / "output.txt"
 
@@ -17,6 +23,7 @@ def test_text_remove_removes_whole_word_only(tmp_path):
 
 
 def test_text_remove_no_match_keeps_text_same(tmp_path):
+    """Output should match input when the target token is not present."""
     input_path = tmp_path / "in.txt"
     output_path = tmp_path / "output.txt"
 
@@ -29,6 +36,7 @@ def test_text_remove_no_match_keeps_text_same(tmp_path):
 
 
 def test_text_remove_overwrite_input_file(tmp_path):
+    """Allow overwriting the input file when input_path == output_path."""
     src = tmp_path / "poe_copy.txt"
     src.write_text("the sea\nThere\nother\n", encoding="utf-8")
 
@@ -39,6 +47,7 @@ def test_text_remove_overwrite_input_file(tmp_path):
 
 
 def test_text_remove_empty_input_file(tmp_path):
+    """Empty input should produce an empty output file."""
     empty_file = tmp_path / "empty.txt"
     out_file = tmp_path / "output.txt"
     empty_file.write_text("", encoding="utf-8")
@@ -49,6 +58,7 @@ def test_text_remove_empty_input_file(tmp_path):
 
 
 def test_text_remove_raises_on_wrong_types(tmp_path):
+    """Raise TypeError when input_path/output_path/string_to_remove are not strings."""
     out_file = tmp_path / "output.txt"
     with pytest.raises(TypeError):
         text_remove(123, str(out_file), "x")
@@ -59,6 +69,7 @@ def test_text_remove_raises_on_wrong_types(tmp_path):
 
 
 def test_text_remove_raises_on_bad_extension(tmp_path):
+    """Raise ValueError when input or output paths do not end with .txt."""
     out_file = tmp_path / "output.csv"
     with pytest.raises(ValueError):
         text_remove("tests/poe.txt", str(out_file), "x")
@@ -67,18 +78,21 @@ def test_text_remove_raises_on_bad_extension(tmp_path):
 
 
 def test_text_remove_raises_on_empty_remove_string(tmp_path):
+    """Raise ValueError when string_to_remove is an empty string."""
     out_file = tmp_path / "output.txt"
     with pytest.raises(ValueError):
         text_remove("tests/poe.txt", str(out_file), "")
 
 
 def test_text_remove_raises_when_input_missing(tmp_path):
+    """Raise FileNotFoundError when the input file does not exist."""
     out_file = tmp_path / "output.txt"
     with pytest.raises(FileNotFoundError):
         text_remove("tests/does_not_exist.txt", str(out_file), "x")
 
 
 def test_text_remove_raises_when_output_dir_missing(tmp_path):
+    """Raise FileNotFoundError when the output directory does not exist."""
     missing_dir = tmp_path / "missing_dir"
     out_file = missing_dir / "output.txt"
     with pytest.raises(FileNotFoundError):
