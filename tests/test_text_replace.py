@@ -3,11 +3,8 @@ Performs unit tests for the text_replace() function.
 """
 
 import pytest
-import os
-import sys
 
-sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
-from src.text_processor.text_replace import text_replace
+from text_processor.text_replace import text_replace
 
 
 def test_regular_replace():
