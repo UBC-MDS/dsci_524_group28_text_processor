@@ -44,7 +44,11 @@ conda activate 524
 
 ### Installing the Package
 
-...
+To install the package locally for testing, use the following command while in the root directory:
+
+```bash
+pip install -e .
+```
 
 ### Running the Tests
 
@@ -60,15 +64,16 @@ pytest
 
 ### Deploying the Documentation
 
-...
+The documentation is automatically deployed once updates are pushed to the deployment branch.
 
-### Using the Package
+### Using `text_processor` in Python
 
 To use text-processor in your code:
 
+...
+
 ```python
->>> import text_processor
->>> text_processor.hello_world()
+>>> from text_processor,
 ```
 
 ## Contributors
