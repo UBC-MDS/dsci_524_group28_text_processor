@@ -116,3 +116,14 @@ def test_text_lower_input_path_not_found():
     """Test that text_lower raises FileNotFoundError if input file not found."""
     with pytest.raises(FileNotFoundError, match="is not found"):
         text_lower("tests/non_existent.txt", "tests/output.txt")
+
+# Milestone 3: additional unit test
+def test_text_lower_raises_when_output_path_points_to_directory(tmp_path):
+    """Output path ends with .txt but is actually a directory -> should raise an OS error."""
+    input_path = "tests/poe.txt"
+
+    out_dir = tmp_path / "out.txt"
+    out_dir.mkdir()
+
+    with pytest.raises(OSError):
+        text_lower(input_path, str(out_dir))

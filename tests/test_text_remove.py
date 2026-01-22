@@ -97,3 +97,17 @@ def test_text_remove_raises_when_output_dir_missing(tmp_path):
     out_file = missing_dir / "output.txt"
     with pytest.raises(FileNotFoundError):
         text_remove("tests/poe.txt", str(out_file), "the")
+
+# Milestone 3: additional unit test
+def test_text_remove_word_at_line_boundaries(tmp_path):
+    """Remove word at start/end of lines; keep newlines intact."""
+    input_path = tmp_path / "in.txt"
+    output_path = tmp_path / "out.txt"
+
+    input_path.write_text("the\nsea the\n the \n", encoding="utf-8")
+
+    text_remove(str(input_path), str(output_path), "the")
+
+    result = output_path.read_text(encoding="utf-8")
+    
+    assert result == "\nsea \n  \n"
