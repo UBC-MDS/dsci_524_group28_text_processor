@@ -27,3 +27,9 @@ jobs:
       - name: Run tests
         run: |
           pytest
+          
+      - name: Run style checks
+        run: |
+          pip install ruff
+          ruff src tests
+

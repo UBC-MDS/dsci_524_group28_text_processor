@@ -51,7 +51,8 @@ Download = "https://pypi.org/project/text-processor/#files"
 # in Mid November 2025.
 dev = [
     "hatch",
-    "pre-commit",
+    "pre-commit",,
+    "ruff"
 ]
 
 docs = [
