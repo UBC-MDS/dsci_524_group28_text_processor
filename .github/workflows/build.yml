@@ -31,5 +31,5 @@ jobs:
       - name: Run style checks
         run: |
           pip install ruff
-          ruff src tests
+          ruff check src tests
 
