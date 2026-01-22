@@ -2,8 +2,6 @@
 
 These tests verify correct whole-word removal behavior and defensive error handling.
 """
-
-import shutil
 import pytest
 
 from text_processor.text_remove import text_remove
