@@ -24,13 +24,45 @@ The functions in `text_processor` are analogous to built-in string methods in th
 
 ## Get started
 
-You can install this package into your preferred Python environment using pip:
+### Cloning the Repository
+
+Clone this GitHub repository and navigate to the project folder using the following commands:
 
 ```bash
-$ pip install text_processor
+git clone https://github.com/UBC-MDS/dsci_524_group28_text_processor.git
+cd dsci_524_group28_text_processor
 ```
 
-TODO: Add a brief example of how to use the package to this section
+### Setting Up the Environment
+
+Create and activate the environment using the `environment.yml` file:
+
+```bash
+conda env create -f environment.yml
+conda activate 524
+```
+
+### Installing the Package
+
+...
+
+### Running the Tests
+
+Run the tests using the following command while in the root directory:
+
+```bash
+pytest
+```
+
+### Building the Documentation
+
+...
+
+### Deploying the Documentation
+
+...
+
+### Using the Package
 
 To use text-processor in your code:
 
