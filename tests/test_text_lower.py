@@ -1,5 +1,4 @@
 import pytest
-import os
 from text_processor.text_lower import text_lower
 
 def test_text_lower_convert():
