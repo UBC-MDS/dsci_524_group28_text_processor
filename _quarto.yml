@@ -1,0 +1,41 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Text Processor"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Reference"
+        href: reference/index.qmd
+
+# tell quarto to read the generated sidebar
+metadata-files:
+  - reference/_sidebar.yml
+
+# tell quarto to read the generated styles
+format:
+  html:
+    css:
+      - reference/_styles-quartodoc.css
+
+quartodoc:
+  # the name used to import the package you want to create reference docs for
+  package: text_processor
+
+  # write sidebar and style data
+  sidebar: reference/_sidebar.yml
+  css: reference/_styles-quartodoc.css
+
+  sections:
+    - title: Main API
+      desc: Functions to help you process text
+      contents:
+        # the functions being documented in the package.
+        # you can refer to anything: class methods, modules, etc..
+        - text_find
+        - text_lower
+        - text_remove
+        - text_replace

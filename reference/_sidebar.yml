@@ -1,0 +1,12 @@
+website:
+  sidebar:
+  - contents:
+    - reference/index.qmd
+    - contents:
+      - reference/text_find.qmd
+      - reference/text_lower.qmd
+      - reference/text_remove.qmd
+      - reference/text_replace.qmd
+      section: Main API
+    id: reference
+  - id: dummy-sidebar

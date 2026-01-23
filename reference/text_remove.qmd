@@ -1,0 +1,54 @@
+# text_remove { #text_processor.text_remove }
+
+`text_remove`
+
+text_remove module.
+
+This module provides functionality to remove a specified word from a text file.
+
+## Functions
+
+| Name | Description |
+| --- | --- |
+| [text_remove](#text_processor.text_remove.text_remove) | Remove all occurrences of a whole word from a text file and write to a new file. |
+
+### text_remove { #text_processor.text_remove.text_remove }
+
+```python
+text_remove.text_remove(input_path, output_path, string_to_remove)
+```
+
+Remove all occurrences of a whole word from a text file and write to a new file.
+
+The function reads the input file using UTF-8 encoding, removes every occurrence
+of ``string_to_remove`` as a whole word (not as a substring), and writes the resulting
+text to the output file using UTF-8 encoding.
+
+#### Parameters {.doc-section .doc-section-parameters}
+
+| Name             | Type   | Description                                                                                                                                                           | Default    |
+|------------------|--------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
+| input_path       | str    | Path to the input text file. Must be a string ending with ``.txt``.                                                                                                   | _required_ |
+| output_path      | str    | Path to write the processed text file. Must be a string ending with ``.txt``. If ``input_path`` and ``output_path`` are the same, the input file will be overwritten. | _required_ |
+| string_to_remove | str    | The word to remove from the input text. Must be a non-empty string.                                                                                                   | _required_ |
+
+#### Returns {.doc-section .doc-section-returns}
+
+| Name   | Type   | Description                                 |
+|--------|--------|---------------------------------------------|
+|        | None   | Writes output to file and returns ``None``. |
+
+#### Raises {.doc-section .doc-section-raises}
+
+| Name   | Type              | Description                                                                                       |
+|--------|-------------------|---------------------------------------------------------------------------------------------------|
+|        | TypeError         | If ``input_path`` or ``output_path`` is not a string, or if ``string_to_remove`` is not a string. |
+|        | ValueError        | If a path does not end with ``.txt`` or if ``string_to_remove`` is empty.                         |
+|        | FileNotFoundError | If the input file does not exist, or if the output directory does not exist.                      |
+|        | OSError           | If an error occurs during file reading/writing.                                                   |
+
+#### Examples {.doc-section .doc-section-examples}
+
+```python
+>>> text_remove("example.txt", "removed.txt", "the")
+```
