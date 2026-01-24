@@ -70,10 +70,10 @@ pytest
 
 ### Building the Documentation
 
-The documentation can be built using Hatch with the following command:
+After installing `text_processor`, the documentation can be built using Hatch with the following command:
 
 ```bash
-hatch run docs:build
+quartodoc build
 ```
 
 ### Deploying the Documentation
