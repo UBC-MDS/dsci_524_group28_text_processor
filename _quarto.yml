@@ -3,6 +3,10 @@ project:
   render:
     - "*.qmd"
     - "index.qmd"
+    - "README.md"
+    - "CODE_OF_CONDUCT.md"
+    - "CONTRIBUTING.md"
+    - "LICENSE.md"
     - "!tests/"
     - "!**/__pycache__"
     - "!DEVELOPMENT.md"
@@ -16,6 +20,24 @@ website:
         href: index.qmd
       - text: "Reference"
         href: reference/index.qmd
+  sidebar:
+    style: "docked"
+    contents:
+      - section: "Getting Started"
+        contents:
+          - README.md
+          - CODE_OF_CONDUCT.md
+          - CONTRIBUTING.md
+          - text: "LICENSE"
+            href: LICENSE.md
+      - text: "---"
+      - section: "References"
+        contents:
+          - reference/index.qmd
+          - reference/text_find.qmd
+          - reference/text_lower.qmd
+          - reference/text_remove.qmd
+          - reference/text_replace.qmd
 
 # tell quarto to read the generated sidebar
 metadata-files:
@@ -28,19 +50,13 @@ format:
       - reference/_styles-quartodoc.css
 
 quartodoc:
-  # the name used to import the package you want to create reference docs for
   package: text_processor
-
-  # write sidebar and style data
   sidebar: reference/_sidebar.yml
   css: reference/_styles-quartodoc.css
-
   sections:
     - title: Main API
       desc: Functions to help you process text
       contents:
-        # the functions being documented in the package.
-        # you can refer to anything: class methods, modules, etc..
         - text_find
         - text_lower
         - text_remove
