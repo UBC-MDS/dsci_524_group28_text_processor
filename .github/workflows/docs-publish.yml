@@ -2,7 +2,7 @@ name: docs-publish
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ quartodoc_cchow ]
   workflow_dispatch:
 
 jobs:
