@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>text_find – Text Processor</title>
+<title>contributing – Text Processor</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,62 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-fd21d93db373728c2f8fcda4b672d2ec.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-fd21d93db373728c2f8fcda4b672d2ec.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -105,7 +70,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="../reference/_styles-quartodoc.css">
+<link rel="stylesheet" href="reference/_styles-quartodoc.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed fullcontent quarto-light">
@@ -115,7 +80,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Text Processor</span>
     </a>
   </div>
@@ -126,11 +91,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../reference/index.html" aria-current="page"> 
+    <a class="nav-link active" href="./reference/index.html" aria-current="page"> 
 <span class="menu-text">Reference</span></a>
   </li>  
 </ul>
@@ -144,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../reference/index.html">References</a></li><li class="breadcrumb-item"><a href="../reference/text_find.html">text_find</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./README.html">Getting Started</a></li><li class="breadcrumb-item"><a href="./CONTRIBUTING.html">Contributing</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -167,25 +132,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../README.html" class="sidebar-item-text sidebar-link">
+  <a href="./README.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome to Text Processor</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../CODE_OF_CONDUCT.html" class="sidebar-item-text sidebar-link">
+  <a href="./CODE_OF_CONDUCT.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Contributor Covenant Code of Conduct</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../CONTRIBUTING.html" class="sidebar-item-text sidebar-link">
+  <a href="./CONTRIBUTING.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Contributing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../LICENSE.html" class="sidebar-item-text sidebar-link">
+  <a href="./LICENSE.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">LICENSE</span></a>
   </div>
 </li>
@@ -203,31 +168,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./reference/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Function reference</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference/text_find.html" class="sidebar-item-text sidebar-link active">
+  <a href="./reference/text_find.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">text_find</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference/text_lower.html" class="sidebar-item-text sidebar-link">
+  <a href="./reference/text_lower.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">text_lower</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference/text_remove.html" class="sidebar-item-text sidebar-link">
+  <a href="./reference/text_remove.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">text_remove</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reference/text_replace.html" class="sidebar-item-text sidebar-link">
+  <a href="./reference/text_replace.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">text_replace</span></a>
   </div>
 </li>
@@ -240,79 +205,97 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../reference/index.html">References</a></li><li class="breadcrumb-item"><a href="../reference/text_find.html">text_find</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./README.html">Getting Started</a></li><li class="breadcrumb-item"><a href="./CONTRIBUTING.html">Contributing</a></li></ol></nav></header>
 
 
 
 
-<section id="text_processor.text_find" class="level1">
-<h1>text_find</h1>
-<p><code>text_find</code></p>
-<p>A module that reads a text file to locate the first occurrence of ‘keyword’ in text and returns its character index.</p>
-<p>Note: The returned index refers to the text read from the processed file (e.g., lowercased / cleaned by earlier steps), not the raw file text.</p>
-<section id="functions" class="level2">
-<h2 class="anchored" data-anchor-id="functions">Functions</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="#text_processor.text_find.text_find">text_find</a></td>
-<td>Finds the first whole-word instance of <code>keyword</code> in a text file.</td>
-</tr>
-</tbody>
-</table>
-<section id="text_processor.text_find.text_find" class="level3">
-<h3 class="anchored" data-anchor-id="text_processor.text_find.text_find">text_find</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>text_find.text_find(input_path, keyword)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Finds the first whole-word instance of <code>keyword</code> in a text file.</p>
-<p>Keyword rules: - keyword must be a string - keyword cannot be empty/whitespace - keyword may contain spaces - keyword words must contain letters only (UTF-8 Unicode letters allowed)</p>
-<p>Returns: - 0-based character index of the first match in the file text - -1 if not found</p>
-<section id="raises" class="level4 doc-section doc-section-raises">
-<h4 class="doc-section doc-section-raises anchored" data-anchor-id="raises">Raises</h4>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 9%">
-<col style="width: 22%">
-<col style="width: 68%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td>TypeError</td>
-<td>If input_path or keyword is not a string.</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>ValueError</td>
-<td>If input_path is not a .txt file, or keyword is invalid.</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>FileNotFoundError</td>
-<td>If the input file does not exist.</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>OSError</td>
-<td>If there is an error reading the file.</td>
-</tr>
-</tbody>
-</table>
-
-
+<section id="contributing" class="level1">
+<h1>Contributing</h1>
+<p>Contributions of all kinds are welcome here, and they are greatly appreciated! Every little bit helps, and credit will always be given.</p>
+<section id="example-contributions" class="level2">
+<h2 class="anchored" data-anchor-id="example-contributions">Example Contributions</h2>
+<p>You can contribute in many ways, for example:</p>
+<ul>
+<li><a href="#report-bugs">Report bugs</a></li>
+<li><a href="#fix-bugs">Fix Bugs</a></li>
+<li><a href="#implement-features">Implement Features</a></li>
+<li><a href="#write-documentation">Write Documentation</a></li>
+<li><a href="#submit-feedback">Submit Feedback</a></li>
+</ul>
+<section id="report-bugs" class="level3">
+<h3 class="anchored" data-anchor-id="report-bugs">Report Bugs</h3>
+<p>Report bugs at <a href="https://github.com/UBC-MDS/dsci_524_group28_text_processor/issues">here</a>.</p>
+<p><strong>If you are reporting a bug, please follow the template guidelines. The more detailed your report, the easier and thus faster we can help you.</strong></p>
 </section>
+<section id="fix-bugs" class="level3">
+<h3 class="anchored" data-anchor-id="fix-bugs">Fix Bugs</h3>
+<p>Look through the GitHub issues for bugs. Anything labelled with <code>bug</code> and <code>help wanted</code> is open to whoever wants to implement it. When you decide to work on such an issue, please assign yourself to it and add a comment that you’ll be working on that, too. If you see another issue without the <code>help wanted</code> label, just post a comment, the maintainers are usually happy for any support that they can get.</p>
+</section>
+<section id="implement-features" class="level3">
+<h3 class="anchored" data-anchor-id="implement-features">Implement Features</h3>
+<p>Look through the GitHub issues for features. Anything labelled with <code>enhancement</code> and <code>help wanted</code> is open to whoever wants to implement it. As for <a href="#fix-bugs">fixing bugs</a>, please assign yourself to the issue and add a comment that you’ll be working on that, too. If another enhancement catches your fancy, but it doesn’t have the <code>help wanted</code> label, just post a comment, the maintainers are usually happy for any support that they can get.</p>
+</section>
+<section id="write-documentation" class="level3">
+<h3 class="anchored" data-anchor-id="write-documentation">Write Documentation</h3>
+<p>Text Processor could always use more documentation, whether as part of the official documentation, in docstrings, or even on the web in blog posts, articles, and such. Just <a href="https://github.com/UBC-MDS/dsci_524_group28_text_processor/issues">open an issue</a> to let us know what you will be working on so that we can provide you with guidance.</p>
+</section>
+<section id="submit-feedback" class="level3">
+<h3 class="anchored" data-anchor-id="submit-feedback">Submit Feedback</h3>
+<p>The best way to send feedback is to file an issue at <a href="https://github.com/UBC-MDS/dsci_524_group28_text_processor/issues">here</a>. If your feedback fits the format of one of the issue templates, please use that. Remember that this is a volunteer-driven project and everybody has limited time.</p>
+</section>
+</section>
+<section id="git-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="git-workflow">Git Workflow</h2>
+<p>We use <strong>GitHub Flow</strong> - industry-standard contribution workflow:</p>
+<ol type="1">
+<li><p>Fork the repository on GitHub: https://github.com/UBC-MDS/dsci_524_group28_text_processor</p></li>
+<li><p>Clone your fork locally (<em>if you want to work locally</em>)</p>
+<pre class="shell"><code>git clone git@github.com:your_name_here/dsci_524_group28_text_processor.git</code></pre></li>
+<li><p><a href="https://hatch.pypa.io/latest/install/">Install hatch</a>.</p></li>
+<li><p>Create a branch for local development using the default branch (typically <code>main</code>) as a starting point. Use <code>fix</code> or <code>feat</code> as a prefix for your branch name.</p>
+<p>Our branch name recommendation: <code>&lt;type&gt;/&lt;short-purpose&gt;-&lt;author&gt;</code></p>
+<p>type = fix, feat, docs</p>
+<p>short-purpose = purpose of the change</p>
+<p>author = your GitHub username</p>
+<p>Example: docs/update-contributing-guide-vtphan</p>
+<p>Then run:</p>
+<pre class="shell"><code>git checkout main
+git checkout -b fix-name-of-your-bugfix</code></pre>
+<p>Now you can make your changes locally.</p></li>
+<li><p>When you’re done making changes, apply the quality assurance tools and check that your changes pass our test suite. This is all included with tox</p>
+<pre class="shell"><code>hatch run test:run</code></pre></li>
+<li><p>Commit your changes and push your branch to GitHub.</p>
+<p>Keep commits small and meaningful.</p>
+<p>Use semantic commit messages (https://www.conventionalcommits.org/).</p>
+<pre class="shell"><code>git add .
+git commit -m "fix: summarize your changes"
+git push -u origin fix-name-of-your-bugfix</code></pre></li>
+<li><p>Open the link displayed in the message when pushing your new branch in order to submit a pull request.</p></li>
+</ol>
+<section id="pull-request-guidelines" class="level3">
+<h3 class="anchored" data-anchor-id="pull-request-guidelines">Pull Request Guidelines</h3>
+<p>Before you submit a pull request, check that it meets these guidelines:</p>
+<ol type="1">
+<li>The pull request should include tests.</li>
+<li>If the pull request adds functionality, the docs should be updated. Put your new functionality into a function with a docstring.</li>
+<li>Your pull request will automatically be checked by the full test suite. It needs to pass all of them before it can be considered for merging.</li>
+</ol>
+</section>
+<section id="merge-rules" class="level3">
+<h3 class="anchored" data-anchor-id="merge-rules">Merge Rules</h3>
+<ol type="1">
+<li>Only maintainers can merge Pull Request</li>
+<li>A PR can only be merged when:
+<ul>
+<li>At least 1 approving review is given</li>
+<li>All requested changes are resolved</li>
+</ul></li>
+<li>The contributor branch will be deleted after merge</li>
+<li>Force-pushing is not allowed after a PR is opened unless requested by a maintainer</li>
+</ol>
+
+
 </section>
 </section>
 </section>

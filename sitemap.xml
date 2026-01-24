@@ -1,27 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://UBC-MDS.github.io/dsci_524_group28_text_processor/LICENSE.html</loc>
+    <lastmod>2026-01-24T21:19:20.499Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UBC-MDS.github.io/dsci_524_group28_text_processor/CODE_OF_CONDUCT.html</loc>
+    <lastmod>2026-01-24T21:19:20.499Z</lastmod>
+  </url>
+  <url>
     <loc>https://UBC-MDS.github.io/dsci_524_group28_text_processor/reference/text_replace.html</loc>
-    <lastmod>2026-01-24T19:33:05.574Z</lastmod>
+    <lastmod>2026-01-24T21:19:40.686Z</lastmod>
   </url>
   <url>
     <loc>https://UBC-MDS.github.io/dsci_524_group28_text_processor/reference/text_lower.html</loc>
-    <lastmod>2026-01-24T19:33:05.558Z</lastmod>
+    <lastmod>2026-01-24T21:19:40.673Z</lastmod>
   </url>
   <url>
     <loc>https://UBC-MDS.github.io/dsci_524_group28_text_processor/reference/index.html</loc>
-    <lastmod>2026-01-24T19:33:05.524Z</lastmod>
+    <lastmod>2026-01-24T21:19:40.644Z</lastmod>
   </url>
   <url>
     <loc>https://UBC-MDS.github.io/dsci_524_group28_text_processor/index.html</loc>
-    <lastmod>2026-01-24T19:32:38.960Z</lastmod>
+    <lastmod>2026-01-24T21:19:20.499Z</lastmod>
   </url>
   <url>
     <loc>https://UBC-MDS.github.io/dsci_524_group28_text_processor/reference/text_find.html</loc>
-    <lastmod>2026-01-24T19:33:05.551Z</lastmod>
+    <lastmod>2026-01-24T21:19:40.666Z</lastmod>
   </url>
   <url>
     <loc>https://UBC-MDS.github.io/dsci_524_group28_text_processor/reference/text_remove.html</loc>
-    <lastmod>2026-01-24T19:33:05.566Z</lastmod>
+    <lastmod>2026-01-24T21:19:40.679Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UBC-MDS.github.io/dsci_524_group28_text_processor/README.html</loc>
+    <lastmod>2026-01-24T21:19:20.499Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UBC-MDS.github.io/dsci_524_group28_text_processor/CONTRIBUTING.html</loc>
+    <lastmod>2026-01-24T21:19:20.499Z</lastmod>
   </url>
 </urlset>
