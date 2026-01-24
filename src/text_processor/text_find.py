@@ -18,7 +18,7 @@ def text_find(input_path: str, keyword: str) -> int:
     - keyword must be a string
     - keyword cannot be empty/whitespace
     - keyword may contain spaces
-    - keyword words must contain letters only (Unicode letters allowed, e.g., é, ñ)
+    - keyword words must contain letters only (UTF-8 Unicode letters allowed)
 
     Returns:
     - 0-based character index of the first match in the file text
