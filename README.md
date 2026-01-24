@@ -2,7 +2,7 @@
 
 |        |        |
 |--------|--------|
-| Package | [![Latest PyPI Version](https://img.shields.io/pypi/v/text-processor.svg)](https://pypi.org/project/text-processor/) [![Supported Python Versions](https://img.shields.io/pypi/pyversions/text-processor.svg)](https://pypi.org/project/text-processor/)  |
+| Package | [![Latest PyPI Version](https://img.shields.io/pypi/v/text-processor.svg)](https://test.pypi.org/project/text-processor/) [![Supported Python Versions](https://img.shields.io/pypi/pyversions/text-processor.svg)](https://test.pypi.org/project/text-processor/)  |
 | Meta   | [![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md) |
 
 `text_processor` is a package that assists in the processing of text files in Python. This allows users to generate insights on and clean raw text data without needing to manually read the file or write the text to a new file, and is particularly useful in cases where users only need to perform a simple operation on the text file.
@@ -22,22 +22,63 @@ The package consists of the following functions:
 
 The functions in `text_processor` are analogous to built-in string methods in the [Python standard library](https://docs.python.org/3/library/index.html) such as `str.lower()`, `str.find()`, and `str.replace()`. They are differentiated by how they are built to handle text files specifically, directly reading from and writing to files rather than working directly with the text as strings.
 
+## Documentation
+
+Our online documentation can be found [here](https://ubc-mds.github.io/dsci_524_group28_text_processor/).
+
 ## Get started
 
-You can install this package into your preferred Python environment using pip:
+### Cloning the Repository
+
+Clone this GitHub repository and navigate to the project folder using the following commands:
 
 ```bash
-$ pip install text_processor
+git clone https://github.com/UBC-MDS/dsci_524_group28_text_processor.git
+cd dsci_524_group28_text_processor
 ```
 
-TODO: Add a brief example of how to use the package to this section
+### Setting Up the Development Environment
 
-To use text-processor in your code:
+Create and activate the development environment using the `environment.yml` file:
 
-```python
->>> import text_processor
->>> text_processor.hello_world()
+```bash
+conda env create -f environment.yml
+conda activate 524
 ```
+
+### Installing the Package
+
+To install the package locally for testing, use the following command while in the root directory:
+
+```bash
+pip install -e .
+```
+
+To instead install the package from TestPyPI, use the following command:
+
+```bash
+pip install -i https://test.pypi.org/simple/ text-processor
+```
+
+### Running the Tests
+
+Run the tests using the following command while in the root directory:
+
+```bash
+pytest
+```
+
+### Building the Documentation
+
+After installing `text_processor`, the documentation can be built using Hatch with the following command:
+
+```bash
+quartodoc build
+```
+
+### Deploying the Documentation
+
+The documentation is automatically rendered and deployed once updates are pushed to the deployment branch.
 
 ## Contributors
 
