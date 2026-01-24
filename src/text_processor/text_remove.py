@@ -1,7 +1,5 @@
 """
-text_remove module.
-
-This module provides functionality to remove a specified word from a text file.
+A module that provides functionality to remove a specified word from a text file.
 """
 
 from __future__ import annotations

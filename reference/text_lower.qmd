@@ -2,13 +2,14 @@
 
 `text_lower`
 
-
+A module that reads a UTF-8 text file, converts all uppercase characters to lowercase,
+then writes the output to a new file.
 
 ## Functions
 
 | Name | Description |
 | --- | --- |
-| [text_lower](#text_processor.text_lower.text_lower) | Converts all characters in a text file to lowercase, then writes the result into another file. If empty input file is provided, it will create an empty output file. |
+| [text_lower](#text_processor.text_lower.text_lower) | Converts all characters in a text file to lowercase, then writes the result into  |
 
 ### text_lower { #text_processor.text_lower.text_lower }
 
@@ -16,14 +17,15 @@
 text_lower.text_lower(input_path, output_path)
 ```
 
-Converts all characters in a text file to lowercase, then writes the result into another file. If empty input file is provided, it will create an empty output file.
+Converts all characters in a text file to lowercase, then writes the result into 
+another file. If empty input file is provided, it will create an empty output file.
 
 #### Parameters {.doc-section .doc-section-parameters}
 
-| Name        | Type   | Description                                                                                                                                           | Default    |
-|-------------|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
-| input_path  | str    | Path to the input text file. Must be a string ending with .txt                                                                                        | _required_ |
-| output_path | str    | Path to write the processed text file. Must be a string ending with .txt. If input and output paths are the same, the input file will be overwritten. | _required_ |
+| Name        | Type   | Description                                                                                                                                            | Default    |
+|-------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
+| input_path  | str    | Path to the input text file. Must be a string ending with .txt                                                                                         | _required_ |
+| output_path | str    | Path to write the processed text file. Must be a string ending with .txt. If  input and output paths are the same, the input file will be overwritten. | _required_ |
 
 #### Returns {.doc-section .doc-section-returns}
 
@@ -44,4 +46,6 @@ Converts all characters in a text file to lowercase, then writes the result into
 
 ```python
 >>> text_lower("example.txt", "example_lower.txt")
+# example_lower.txt contains the contents of example.txt, but with all
+# instances of uppercase characters replaced with lowercase equivalents
 ```

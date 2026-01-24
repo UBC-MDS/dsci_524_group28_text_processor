@@ -1,19 +1,22 @@
-import os
+"""
+A module that reads a UTF-8 text file, converts all uppercase characters to lowercase,
+then writes the output to a new file.
+"""
 
-"""
-A module that reads a UTF-8 text file, converts all uppercase characters to lowercase, then writes the output to a new file.
-"""
+import os
 
 def text_lower(input_path: str, output_path: str):
     """
-    Converts all characters in a text file to lowercase, then writes the result into another file. If empty input file is provided, it will create an empty output file.
+    Converts all characters in a text file to lowercase, then writes the result into 
+    another file. If empty input file is provided, it will create an empty output file.
     
     Parameters
     ----------
     input_path : str
         Path to the input text file. Must be a string ending with .txt
     output_path : str
-        Path to write the processed text file. Must be a string ending with .txt. If input and output paths are the same, the input file will be overwritten.
+        Path to write the processed text file. Must be a string ending with .txt. If 
+        input and output paths are the same, the input file will be overwritten.
 
     Returns
     -------
@@ -34,7 +37,10 @@ def text_lower(input_path: str, output_path: str):
     Examples
     --------
     >>> text_lower("example.txt", "example_lower.txt")
+    # example_lower.txt contains the contents of example.txt, but with all
+    # instances of uppercase characters replaced with lowercase equivalents
     """
+  
     # TypeError exception if not string for input_path and output_path
     if not isinstance(input_path, str) or not isinstance(output_path, str):
         raise TypeError("Both input_path and output_path must be strings")
