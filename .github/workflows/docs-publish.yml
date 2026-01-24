@@ -1,38 +1,40 @@
-name: docs-publish
-
 on:
   workflow_dispatch:
   push:
-    branches: [ quartodoc_cchow ]
+    branches: [main, quartodoc_cchow]
+
+name: Render and Publish docs
 
 jobs:
-  build-docs:
+  render-docs:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v2
+      - name: Check out repository
+        uses: actions/checkout@v4
 
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      # Set up Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.13'
 
+      # Install dependencies
       - name: Install dependencies
         run: |
-          pip install -e ".[docs]"
-          #pip install quartodoc
+          python -m pip install --upgrade pip
+          pip install -e .[docs]
 
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-
-      - name: Build quartodoc
+      # manually call quartodoc build
+      - name: quartodoc build
         run: |
-          quartodoc build --verbose
+          quartodoc build
 
-      - name: Render Quarto site
-        run: |
-          quarto render
-  
-      - name: Publish to gh-pages branch
+      - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
