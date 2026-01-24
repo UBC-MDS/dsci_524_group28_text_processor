@@ -116,3 +116,15 @@ def test_input_file_not_found():
     """Tests that the function throws an error when the input file doesn't exist"""
     with pytest.raises(FileNotFoundError):
         text_replace("tests/dne.txt", "tests/output.txt", "sea", "bee")
+
+# Milestone 3: additional unit test
+def test_text_replace_overwrite_input_file(tmp_path):
+    """Test that text_replace can overwrite the input file when input_path == output_path."""
+    file_path = tmp_path / "in.txt"
+    file_path.write_text("the sea\nsea\n", encoding="utf-8")
+
+    # overwrite in place
+    text_replace(str(file_path), str(file_path), "sea", "bee")
+
+    result = file_path.read_text(encoding="utf-8")
+    assert result == "the bee\nbee\n"
