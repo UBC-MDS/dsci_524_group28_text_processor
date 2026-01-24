@@ -1,7 +1,0 @@
-name: '524'
-channels:
-  - conda-forge
-dependencies:
-  - python=3.13
-  - pytest
-

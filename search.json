@@ -1,0 +1,155 @@
+[
+  {
+    "objectID": "reference/text_replace.html",
+    "href": "reference/text_replace.html",
+    "title": "text_replace",
+    "section": "",
+    "text": "text_replace\nA module that reads a text file, replaces all instances of a string with another string, then writes the output to a new file.\n\n\n\n\n\nName\nDescription\n\n\n\n\ntext_replace\nReplaces all instances of a string with another string in a text\n\n\n\n\n\ntext_replace.text_replace(input_path, output_path, old, new)\nReplaces all instances of a string with another string in a text file, then writes the result into another file. If the old string does not exist in the file, then the output will be the same unaltered file.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ninput_path\nstr\nAn existing file path to the text file to read. The file must be readable.\nrequired\n\n\noutput_path\nstr\nThe file path to write the replaced text to. The file, should it exist, must be writeable.\nrequired\n\n\nold\nstr\nA (non-empty) string to replace.\nrequired\n\n\nnew\nstr\nThe replacement string.\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nNone\n\n\n\n\n\n\n\n&gt;&gt;&gt; text_replace(\"example.txt\", \"replaced.txt\", \"color\", \"colour\")\n# replaced.txt contains the contents of example.txt, but with all\n# instances of 'color' replaced with \"colour\"",
+    "crumbs": [
+      "Reference",
+      "Main API",
+      "text_replace"
+    ]
+  },
+  {
+    "objectID": "reference/text_replace.html#functions",
+    "href": "reference/text_replace.html#functions",
+    "title": "text_replace",
+    "section": "",
+    "text": "Name\nDescription\n\n\n\n\ntext_replace\nReplaces all instances of a string with another string in a text\n\n\n\n\n\ntext_replace.text_replace(input_path, output_path, old, new)\nReplaces all instances of a string with another string in a text file, then writes the result into another file. If the old string does not exist in the file, then the output will be the same unaltered file.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ninput_path\nstr\nAn existing file path to the text file to read. The file must be readable.\nrequired\n\n\noutput_path\nstr\nThe file path to write the replaced text to. The file, should it exist, must be writeable.\nrequired\n\n\nold\nstr\nA (non-empty) string to replace.\nrequired\n\n\nnew\nstr\nThe replacement string.\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nNone\n\n\n\n\n\n\n\n&gt;&gt;&gt; text_replace(\"example.txt\", \"replaced.txt\", \"color\", \"colour\")\n# replaced.txt contains the contents of example.txt, but with all\n# instances of 'color' replaced with \"colour\"",
+    "crumbs": [
+      "Reference",
+      "Main API",
+      "text_replace"
+    ]
+  },
+  {
+    "objectID": "reference/text_lower.html",
+    "href": "reference/text_lower.html",
+    "title": "text_lower",
+    "section": "",
+    "text": "text_lower\nA module that reads a UTF-8 text file, converts all uppercase characters to lowercase, then writes the output to a new file.\n\n\n\n\n\nName\nDescription\n\n\n\n\ntext_lower\nConverts all characters in a text file to lowercase, then writes the result into\n\n\n\n\n\ntext_lower.text_lower(input_path, output_path)\nConverts all characters in a text file to lowercase, then writes the result into another file. If empty input file is provided, it will create an empty output file.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ninput_path\nstr\nPath to the input text file. Must be a string ending with .txt\nrequired\n\n\noutput_path\nstr\nPath to write the processed text file. Must be a string ending with .txt. If input and output paths are the same, the input file will be overwritten.\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nNone\nFunction writes directly to a UTF-8 file and returns None.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input_path or output_path is not a string.\n\n\n\nValueError\nIf input_path or output_path does not have a .txt file extension.\n\n\n\nFileNotFoundError\nIf the input file does not exist.\n\n\n\nOSError\nIf there is an error reading from or writing to the file.\n\n\n\n\n\n\n&gt;&gt;&gt; text_lower(\"example.txt\", \"example_lower.txt\")\n# example_lower.txt contains the contents of example.txt, but with all\n# instances of uppercase characters replaced with lowercase equivalents",
+    "crumbs": [
+      "Reference",
+      "Main API",
+      "text_lower"
+    ]
+  },
+  {
+    "objectID": "reference/text_lower.html#functions",
+    "href": "reference/text_lower.html#functions",
+    "title": "text_lower",
+    "section": "",
+    "text": "Name\nDescription\n\n\n\n\ntext_lower\nConverts all characters in a text file to lowercase, then writes the result into\n\n\n\n\n\ntext_lower.text_lower(input_path, output_path)\nConverts all characters in a text file to lowercase, then writes the result into another file. If empty input file is provided, it will create an empty output file.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ninput_path\nstr\nPath to the input text file. Must be a string ending with .txt\nrequired\n\n\noutput_path\nstr\nPath to write the processed text file. Must be a string ending with .txt. If input and output paths are the same, the input file will be overwritten.\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nNone\nFunction writes directly to a UTF-8 file and returns None.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input_path or output_path is not a string.\n\n\n\nValueError\nIf input_path or output_path does not have a .txt file extension.\n\n\n\nFileNotFoundError\nIf the input file does not exist.\n\n\n\nOSError\nIf there is an error reading from or writing to the file.\n\n\n\n\n\n\n&gt;&gt;&gt; text_lower(\"example.txt\", \"example_lower.txt\")\n# example_lower.txt contains the contents of example.txt, but with all\n# instances of uppercase characters replaced with lowercase equivalents",
+    "crumbs": [
+      "Reference",
+      "Main API",
+      "text_lower"
+    ]
+  },
+  {
+    "objectID": "reference/index.html",
+    "href": "reference/index.html",
+    "title": "Function reference",
+    "section": "",
+    "text": "Functions to help you process text\n\n\n\ntext_find\nA module that reads a text file to locate the first occurrence of ‘keyword’ in text\n\n\ntext_lower\nA module that reads a UTF-8 text file, converts all uppercase characters to lowercase,\n\n\ntext_remove\nA module that provides functionality to remove a specified word from a text file.\n\n\ntext_replace\nA module that reads a text file, replaces all instances of a string",
+    "crumbs": [
+      "Reference",
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/index.html#main-api",
+    "href": "reference/index.html#main-api",
+    "title": "Function reference",
+    "section": "",
+    "text": "Functions to help you process text\n\n\n\ntext_find\nA module that reads a text file to locate the first occurrence of ‘keyword’ in text\n\n\ntext_lower\nA module that reads a UTF-8 text file, converts all uppercase characters to lowercase,\n\n\ntext_remove\nA module that provides functionality to remove a specified word from a text file.\n\n\ntext_replace\nA module that reads a text file, replaces all instances of a string",
+    "crumbs": [
+      "Reference",
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to Text Processor",
+    "section": "",
+    "text": "Package\n \n\n\nMeta\n\n\n\n\ntext_processor is a package that assists in the processing of text files in Python. This allows users to generate insights on and clean raw text data without needing to manually read the file or write the text to a new file, and is particularly useful in cases where users only need to perform a simple operation on the text file.\nThe package consists of the following functions:\n\ntext_lower:\n\nThis function converts all characters in a text file to lower case and writes it to a specified file.\n\ntext_find:\n\nThis function finds the index of the first instance of a specified string in a text file. If the string does not exist in the file, it will return -1.\n\ntext_remove:\n\nThis function removes all instances of a specified string in a text file, then writes it to a new file.\n\ntext_replace:\n\nThis function replaces all instances of a specified string in a text file with another string, then writes it to a new file.\n\n\n\n\nThe functions in text_processor are analogous to built-in string methods in the Python standard library such as str.lower(), str.find(), and str.replace(). They are differentiated by how they are built to handle text files specifically, directly reading from and writing to files rather than working directly with the text as strings.\n\n\n\nYou can install this package into your preferred Python environment using pip:\n$ pip install text_processor\nTODO: Add a brief example of how to use the package to this section\nTo use text-processor in your code:\n&gt;&gt;&gt; import text_processor\n&gt;&gt;&gt; text_processor.hello_world()\n\n\n\n\nAitong Wu\nChristine Chow\nJulia Zhang\nVy Phan\n\n\n\n\n\nCopyright © 2026 Julia Zhang, Vy Phan, Aitong Wu, Christine Chow.\nFree software distributed under the MIT License."
+  },
+  {
+    "objectID": "index.html#text_processor-in-the-python-ecosystem",
+    "href": "index.html#text_processor-in-the-python-ecosystem",
+    "title": "Welcome to Text Processor",
+    "section": "",
+    "text": "The functions in text_processor are analogous to built-in string methods in the Python standard library such as str.lower(), str.find(), and str.replace(). They are differentiated by how they are built to handle text files specifically, directly reading from and writing to files rather than working directly with the text as strings."
+  },
+  {
+    "objectID": "index.html#get-started",
+    "href": "index.html#get-started",
+    "title": "Welcome to Text Processor",
+    "section": "",
+    "text": "You can install this package into your preferred Python environment using pip:\n$ pip install text_processor\nTODO: Add a brief example of how to use the package to this section\nTo use text-processor in your code:\n&gt;&gt;&gt; import text_processor\n&gt;&gt;&gt; text_processor.hello_world()"
+  },
+  {
+    "objectID": "index.html#contributors",
+    "href": "index.html#contributors",
+    "title": "Welcome to Text Processor",
+    "section": "",
+    "text": "Aitong Wu\nChristine Chow\nJulia Zhang\nVy Phan"
+  },
+  {
+    "objectID": "index.html#copyright",
+    "href": "index.html#copyright",
+    "title": "Welcome to Text Processor",
+    "section": "",
+    "text": "Copyright © 2026 Julia Zhang, Vy Phan, Aitong Wu, Christine Chow.\nFree software distributed under the MIT License."
+  },
+  {
+    "objectID": "reference/text_find.html",
+    "href": "reference/text_find.html",
+    "title": "text_find",
+    "section": "",
+    "text": "text_find\nA module that reads a text file to locate the first occurrence of ‘keyword’ in text and returns its character index.\nNote: The returned index refers to the text read from the processed file (e.g., lowercased / cleaned by earlier steps), not the raw file text.\n\n\n\n\n\nName\nDescription\n\n\n\n\ntext_find\nFinds the first whole-word instance of keyword in a text file.\n\n\n\n\n\ntext_find.text_find(input_path, keyword)\nFinds the first whole-word instance of keyword in a text file.\nKeyword rules: - keyword must be a string - keyword cannot be empty/whitespace - keyword may contain spaces - keyword words must contain letters only (UTF-8 Unicode letters allowed)\nReturns: - 0-based character index of the first match in the file text - -1 if not found\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input_path or keyword is not a string.\n\n\n\nValueError\nIf input_path is not a .txt file, or keyword is invalid.\n\n\n\nFileNotFoundError\nIf the input file does not exist.\n\n\n\nOSError\nIf there is an error reading the file.",
+    "crumbs": [
+      "Reference",
+      "Main API",
+      "text_find"
+    ]
+  },
+  {
+    "objectID": "reference/text_find.html#functions",
+    "href": "reference/text_find.html#functions",
+    "title": "text_find",
+    "section": "",
+    "text": "Name\nDescription\n\n\n\n\ntext_find\nFinds the first whole-word instance of keyword in a text file.\n\n\n\n\n\ntext_find.text_find(input_path, keyword)\nFinds the first whole-word instance of keyword in a text file.\nKeyword rules: - keyword must be a string - keyword cannot be empty/whitespace - keyword may contain spaces - keyword words must contain letters only (UTF-8 Unicode letters allowed)\nReturns: - 0-based character index of the first match in the file text - -1 if not found\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input_path or keyword is not a string.\n\n\n\nValueError\nIf input_path is not a .txt file, or keyword is invalid.\n\n\n\nFileNotFoundError\nIf the input file does not exist.\n\n\n\nOSError\nIf there is an error reading the file.",
+    "crumbs": [
+      "Reference",
+      "Main API",
+      "text_find"
+    ]
+  },
+  {
+    "objectID": "reference/text_remove.html",
+    "href": "reference/text_remove.html",
+    "title": "text_remove",
+    "section": "",
+    "text": "text_remove\nA module that provides functionality to remove a specified word from a text file.\n\n\n\n\n\nName\nDescription\n\n\n\n\ntext_remove\nRemove all occurrences of a whole word from a text file and write to a new file.\n\n\n\n\n\ntext_remove.text_remove(input_path, output_path, string_to_remove)\nRemove all occurrences of a whole word from a text file and write to a new file.\nThe function reads the input file using UTF-8 encoding, removes every occurrence of string_to_remove as a whole word (not as a substring), and writes the resulting text to the output file using UTF-8 encoding.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ninput_path\nstr\nPath to the input text file. Must be a string ending with .txt.\nrequired\n\n\noutput_path\nstr\nPath to write the processed text file. Must be a string ending with .txt. If input_path and output_path are the same, the input file will be overwritten.\nrequired\n\n\nstring_to_remove\nstr\nThe word to remove from the input text. Must be a non-empty string.\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nNone\nWrites output to file and returns None.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input_path or output_path is not a string, or if string_to_remove is not a string.\n\n\n\nValueError\nIf a path does not end with .txt or if string_to_remove is empty.\n\n\n\nFileNotFoundError\nIf the input file does not exist, or if the output directory does not exist.\n\n\n\nOSError\nIf an error occurs during file reading/writing.\n\n\n\n\n\n\n&gt;&gt;&gt; text_remove(\"example.txt\", \"removed.txt\", \"the\")",
+    "crumbs": [
+      "Reference",
+      "Main API",
+      "text_remove"
+    ]
+  },
+  {
+    "objectID": "reference/text_remove.html#functions",
+    "href": "reference/text_remove.html#functions",
+    "title": "text_remove",
+    "section": "",
+    "text": "Name\nDescription\n\n\n\n\ntext_remove\nRemove all occurrences of a whole word from a text file and write to a new file.\n\n\n\n\n\ntext_remove.text_remove(input_path, output_path, string_to_remove)\nRemove all occurrences of a whole word from a text file and write to a new file.\nThe function reads the input file using UTF-8 encoding, removes every occurrence of string_to_remove as a whole word (not as a substring), and writes the resulting text to the output file using UTF-8 encoding.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ninput_path\nstr\nPath to the input text file. Must be a string ending with .txt.\nrequired\n\n\noutput_path\nstr\nPath to write the processed text file. Must be a string ending with .txt. If input_path and output_path are the same, the input file will be overwritten.\nrequired\n\n\nstring_to_remove\nstr\nThe word to remove from the input text. Must be a non-empty string.\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nNone\nWrites output to file and returns None.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input_path or output_path is not a string, or if string_to_remove is not a string.\n\n\n\nValueError\nIf a path does not end with .txt or if string_to_remove is empty.\n\n\n\nFileNotFoundError\nIf the input file does not exist, or if the output directory does not exist.\n\n\n\nOSError\nIf an error occurs during file reading/writing.\n\n\n\n\n\n\n&gt;&gt;&gt; text_remove(\"example.txt\", \"removed.txt\", \"the\")",
+    "crumbs": [
+      "Reference",
+      "Main API",
+      "text_remove"
+    ]
+  }
+]
