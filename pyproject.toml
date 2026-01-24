@@ -39,10 +39,10 @@ keywords = []
 dependencies = []
 
 [project.urls]
-Homepage = "https://github.com/UBC-MDS/text-processor"
-"Source Code" = "https://github.com/UBC-MDS/text-processor"
-"Bug Tracker" = "https://github.com/UBC-MDS/text-processor/issues"
-Documentation = "https://github.com/UBC-MDS/text-processor/blob/main/README.md"
+Homepage = "https://github.com/UBC-MDS/dsci_524_group28_text_processor"
+"Source Code" = "https://github.com/UBC-MDS/dsci_524_group28_text_processor"
+"Bug Tracker" = "https://github.com/UBC-MDS/dsci_524_group28_text_processor/issues"
+Documentation = "https://github.com/UBC-MDS/dsci_524_group28_text_processor/blob/main/README.md"
 Download = "https://pypi.org/project/text-processor/#files"
 
 [project.optional-dependencies]
