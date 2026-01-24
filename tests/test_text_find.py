@@ -99,3 +99,15 @@ def test_text_find_input_path_invalid_extension_raises():
 def test_text_find_input_path_not_found_raises():
     with pytest.raises(FileNotFoundError, match="is not found"):
         text_find("tests/does_not_exist.txt", "anna")
+
+# Milestone 3: additional unit test
+def test_text_find_does_not_match_across_newlines():
+    """
+    Keyword should not match across line breaks.
+    Example: 'anna\\nlee' should not be treated as 'anna lee'.
+    """
+    input_path = "tests/output.txt"
+    with open(input_path, "w", encoding="utf-8") as f:
+        f.write("start anna\nlee end\n")
+
+    assert text_find(input_path, "anna lee") == -1
