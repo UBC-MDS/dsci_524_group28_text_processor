@@ -10,7 +10,6 @@ project:
     - "!tests/"
     - "!**/__pycache__"
     - "!DEVELOPMENT.md"
-  output-dir: docs
 
 website:
   title: "Text Processor"
