@@ -54,6 +54,12 @@ To install the package locally for testing, use the following command while in t
 pip install -e .
 ```
 
+To instead install the package from TestPyPI, use the following command:
+
+```bash
+pip install -i https://test.pypi.org/simple/ text-processor
+```
+
 ### Running the Tests
 
 Run the tests using the following command while in the root directory:
