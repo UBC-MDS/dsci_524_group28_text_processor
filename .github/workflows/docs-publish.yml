@@ -1,9 +1,9 @@
 name: docs-publish
 
 on:
-  pull_request:
-    branches: [ quartodoc_cchow ]
   workflow_dispatch:
+  push:
+    branches: [ quartodoc_cchow ]
 
 jobs:
   build-docs:
