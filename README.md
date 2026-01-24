@@ -2,7 +2,7 @@
 
 |        |        |
 |--------|--------|
-| Package | [![Latest PyPI Version](https://img.shields.io/pypi/v/text-processor.svg)](https://pypi.org/project/text-processor/) [![Supported Python Versions](https://img.shields.io/pypi/pyversions/text-processor.svg)](https://pypi.org/project/text-processor/)  |
+| Package | [![Latest PyPI Version](https://img.shields.io/pypi/v/text-processor.svg)](https://test.pypi.org/project/text-processor/) [![Supported Python Versions](https://img.shields.io/pypi/pyversions/text-processor.svg)](https://test.pypi.org/project/text-processor/)  |
 | Meta   | [![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md) |
 
 `text_processor` is a package that assists in the processing of text files in Python. This allows users to generate insights on and clean raw text data without needing to manually read the file or write the text to a new file, and is particularly useful in cases where users only need to perform a simple operation on the text file.
@@ -22,6 +22,10 @@ The package consists of the following functions:
 
 The functions in `text_processor` are analogous to built-in string methods in the [Python standard library](https://docs.python.org/3/library/index.html) such as `str.lower()`, `str.find()`, and `str.replace()`. They are differentiated by how they are built to handle text files specifically, directly reading from and writing to files rather than working directly with the text as strings.
 
+## Documentation
+
+Our online documentation can be found [here](https://ubc-mds.github.io/dsci_524_group28_text_processor/).
+
 ## Get started
 
 ### Cloning the Repository
@@ -33,9 +37,9 @@ git clone https://github.com/UBC-MDS/dsci_524_group28_text_processor.git
 cd dsci_524_group28_text_processor
 ```
 
-### Setting Up the Environment
+### Setting Up the Development Environment
 
-Create and activate the environment using the `environment.yml` file:
+Create and activate the development environment using the `environment.yml` file:
 
 ```bash
 conda env create -f environment.yml
@@ -60,21 +64,15 @@ pytest
 
 ### Building the Documentation
 
-...
+The documentation can be built using Hatch with the following command:
+
+```bash
+hatch run docs:build
+```
 
 ### Deploying the Documentation
 
-The documentation is automatically deployed once updates are pushed to the deployment branch.
-
-### Using `text_processor` in Python
-
-To use text-processor in your code:
-
-...
-
-```python
->>> from text_processor,
-```
+The documentation is automatically rendered and deployed once updates are pushed to the deployment branch.
 
 ## Contributors
 
