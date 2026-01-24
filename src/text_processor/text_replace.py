@@ -26,6 +26,14 @@ def text_replace(input_path: str, output_path: str, old: str, new: str):
     -------
     None
 
+    Raises
+    ------
+    TypeError
+        If input_path, output_path, old, or new is not a string.
+    ValueError
+        If old is an empty string, or the input_path or output_path are not
+        paths to .txt files.
+
     Examples
     --------
     >>> text_replace("example.txt", "replaced.txt", "color", "colour")
