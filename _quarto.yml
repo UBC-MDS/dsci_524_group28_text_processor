@@ -1,0 +1,62 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+    - "index.qmd"
+    - "README.md"
+    - "CODE_OF_CONDUCT.md"
+    - "CONTRIBUTING.md"
+    - "LICENSE.md"
+    - "!tests/"
+    - "!**/__pycache__"
+    - "!DEVELOPMENT.md"
+
+website:
+  title: "Text Processor"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Reference"
+        href: reference/index.qmd
+  sidebar:
+    style: "docked"
+    contents:
+      - section: "Getting Started"
+        contents:
+          - README.md
+          - CODE_OF_CONDUCT.md
+          - CONTRIBUTING.md
+          - text: "LICENSE"
+            href: LICENSE.md
+      - text: "---"
+      - section: "References"
+        contents:
+          - reference/index.qmd
+          - reference/text_find.qmd
+          - reference/text_lower.qmd
+          - reference/text_remove.qmd
+          - reference/text_replace.qmd
+
+# tell quarto to read the generated sidebar
+metadata-files:
+  - reference/_sidebar.yml
+
+# tell quarto to read the generated styles
+format:
+  html:
+    css:
+      - reference/_styles-quartodoc.css
+
+quartodoc:
+  package: text_processor
+  sidebar: reference/_sidebar.yml
+  css: reference/_styles-quartodoc.css
+  sections:
+    - title: Main API
+      desc: Functions to help you process text
+      contents:
+        - text_find
+        - text_lower
+        - text_remove
+        - text_replace

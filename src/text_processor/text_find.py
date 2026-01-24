@@ -14,15 +14,18 @@ def text_find(input_path: str, keyword: str) -> int:
     """
     Finds the first whole-word instance of `keyword` in a text file.
 
-    Keyword rules:
-    - keyword must be a string
-    - keyword cannot be empty/whitespace
-    - keyword may contain spaces
-    - keyword words must contain letters only (Unicode letters allowed, e.g., é, ñ)
+    Parameters
+    ----------
+    input_path : str
+        Path to the input text file. Must be a string ending with .txt
+    keyword : str
+        The keyword to search for. Must be non-empty string containing only
+        letters and spaces (UTF-8 Unicode letters allowed). 
 
-    Returns:
-    - 0-based character index of the first match in the file text
-    - -1 if not found
+    Returns
+    -------
+        0-based character index of the first match in the file text, or -1 
+        if not found.
 
     Raises
     ------
@@ -34,7 +37,22 @@ def text_find(input_path: str, keyword: str) -> int:
         If the input file does not exist.
     OSError
         If there is an error reading the file.
+
+    Examples
+    --------
+    >>> text_find("example.txt", "hello")
+    0
+    # Returns 0 if "hello" appears at start of example
+
+    >>> text_find("example.txt", "world")
+    6
+    # Returns 6 if "world" appears at character index 6
+
+    >>> text_find("example.txt", "missing")
+    -1
+    # Returns -1 if "missing" is not found in example.txt
     """
+    
     # Validate input_path
     if not isinstance(input_path, str):
         raise TypeError("input_path must be a string")
