@@ -7,9 +7,6 @@ project:
     - "CODE_OF_CONDUCT.md"
     - "CONTRIBUTING.md"
     - "LICENSE.md"
-    - "!tests/"
-    - "!**/__pycache__"
-    - "!DEVELOPMENT.md"
 
 website:
   title: "Text Processor"
