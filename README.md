@@ -74,7 +74,6 @@ After installing `text_processor`, the documentation can be built using Hatch wi
 
 ```bash
 quartodoc build
-quarto preview
 ```
 
 ### Deploying the Documentation
