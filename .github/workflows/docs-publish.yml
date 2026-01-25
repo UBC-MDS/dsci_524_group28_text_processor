@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
-  push:
-    branches: [main, quartodoc_cchow]
+  pull_request:
+    branches: [ main ]
 
 name: Render and Publish docs
 
