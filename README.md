@@ -19,9 +19,13 @@ The package consists of the following functions:
 - `text_replace`:
   - This function replaces all instances of a specified string in a text file with another string, then writes it to a new file.
 
-## `text_processor` in the Python Ecosystem
+## Installation
 
-The functions in `text_processor` are analogous to built-in string methods in the [Python standard library](https://docs.python.org/3/library/index.html) such as `str.lower()`, `str.find()`, and `str.replace()`. They are differentiated by how they are built to handle text files specifically, directly reading from and writing to files rather than working directly with the text as strings.
+To install the package from TestPyPI, use the following command:
+
+```bash
+pip install --no-cache-dir --index-url https://test.pypi.org/simple/ text-processor
+```
 
 ## Documentation
 
@@ -47,18 +51,12 @@ conda env create -f environment.yml
 conda activate 524
 ```
 
-### Installing the Package
+### Locally Installing the Package
 
 To install the package locally for testing, use the following command while in the root directory:
 
 ```bash
 pip install -e .
-```
-
-To instead install the package from TestPyPI, use the following command:
-
-```bash
-pip install -i https://test.pypi.org/simple/ text-processor
 ```
 
 ### Running the Tests
@@ -80,6 +78,10 @@ quartodoc build
 ### Deploying the Documentation
 
 The documentation is automatically rendered and deployed once updates are pushed to the deployment branch.
+
+## `text_processor` in the Python Ecosystem
+
+The functions in `text_processor` are analogous to built-in string methods in the [Python standard library](https://docs.python.org/3/library/index.html) such as `str.lower()`, `str.find()`, and `str.replace()`. They are differentiated by how they are built to handle text files specifically, directly reading from and writing to files rather than working directly with the text as strings.
 
 ## Contributors
 
