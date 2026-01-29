@@ -5,6 +5,12 @@
 | Package | [![Latest PyPI Version](https://img.shields.io/pypi/v/text-processor.svg)](https://test.pypi.org/project/text-processor/) [![Supported Python Versions](https://img.shields.io/pypi/pyversions/text-processor.svg)](https://test.pypi.org/project/text-processor/)  |
 | Meta   | [![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md) |
 
+|        |        |
+|--------|--------|
+| CI/CD  | [![CI](https://github.com/UBC-MDS/dsci_524_group28_text_processor/actions/workflows/build.yml/badge.svg)](https://github.com/UBC-MDS/dsci_524_group28_text_processor/actions/workflows/build.yml) [![codecov](https://codecov.io/gh/UBC-MDS/dsci_524_group28_text_processor/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/dsci_524_group28_text_processor) |
+| Package | [![Supported Python Versions](https://img.shields.io/pypi/pyversions/text-processor.svg)](https://test.pypi.org/project/text-processor/)  |
+| Meta   | [![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md) |
+
 `text_processor` is a package that assists in the processing of text files in Python. This allows users to generate insights on and clean raw text data without needing to manually read the file or write the text to a new file, and is particularly useful in cases where users only need to perform a simple operation on the text file.
 
 The package consists of the following functions:
