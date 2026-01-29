@@ -25,12 +25,18 @@ jobs:
           python -m pip install --upgrade pip
           pip install -e ".[tests]"
 
-      - name: Run tests
+      - name: Run tests with coverage
         run: |
-          pytest
+          pytest --cov --cov-report=xml --cov-branch
 
       - name: Run style checks
         run: |
           pip install ruff
           ruff check src tests
+      
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+
 
