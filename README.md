@@ -2,11 +2,6 @@
 
 |        |        |
 |--------|--------|
-| Package | [![Latest PyPI Version](https://img.shields.io/pypi/v/text-processor.svg)](https://test.pypi.org/project/text-processor/) [![Supported Python Versions](https://img.shields.io/pypi/pyversions/text-processor.svg)](https://test.pypi.org/project/text-processor/)  |
-| Meta   | [![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md) |
-
-|        |        |
-|--------|--------|
 | CI/CD  | [![CI](https://github.com/UBC-MDS/dsci_524_group28_text_processor/actions/workflows/build.yml/badge.svg)](https://github.com/UBC-MDS/dsci_524_group28_text_processor/actions/workflows/build.yml) [![codecov](https://codecov.io/gh/UBC-MDS/dsci_524_group28_text_processor/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/dsci_524_group28_text_processor) |
 | Package | [![Supported Python Versions](https://img.shields.io/pypi/pyversions/text-processor.svg)](https://test.pypi.org/project/text-processor/)  |
 | Meta   | [![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md) |
