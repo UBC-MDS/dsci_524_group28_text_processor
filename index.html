@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Text Processor</title>
+<title>text_processor Tutorial – Text Processor</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -126,11 +126,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Home</span></a>
+    <a class="nav-link" href="./tutorial.html"> 
+<span class="menu-text">Tutorial</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./reference/index.html"> 
+    <a class="nav-link active" href="./reference/index.html" aria-current="page"> 
 <span class="menu-text">Reference</span></a>
   </li>  
 </ul>
@@ -144,7 +144,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">text_processor Tutorial</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -246,104 +246,128 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">text_processor Tutorial</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="welcome-to-text-processor" class="level1">
-<h1>Welcome to Text Processor</h1>
-<table class="caption-top table">
-<tbody>
-<tr class="odd">
-<td>Package</td>
-<td><a href="https://test.pypi.org/project/text-processor/"><img src="https://img.shields.io/pypi/v/text-processor.svg" class="img-fluid" alt="Latest PyPI Version"></a> <a href="https://test.pypi.org/project/text-processor/"><img src="https://img.shields.io/pypi/pyversions/text-processor.svg" class="img-fluid" alt="Supported Python Versions"></a></td>
-</tr>
-<tr class="even">
-<td>Meta</td>
-<td><a href="./CODE_OF_CONDUCT.html"><img src="https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg" class="img-fluid" alt="Code of Conduct"></a></td>
-</tr>
-</tbody>
-</table>
-<p><code>text_processor</code> is a package that assists in the processing of text files in Python. This allows users to generate insights on and clean raw text data without needing to manually read the file or write the text to a new file, and is particularly useful in cases where users only need to perform a simple operation on the text file.</p>
-<p>The package consists of the following functions:</p>
-<ul>
-<li><code>text_lower</code>:
-<ul>
-<li>This function converts all characters in a text file to lower case and writes it to a specified file.</li>
-</ul></li>
-<li><code>text_find</code>:
-<ul>
-<li>This function finds the index of the first instance of a specified string in a text file. If the string does not exist in the file, it will return -1.</li>
-</ul></li>
-<li><code>text_remove</code>:
-<ul>
-<li>This function removes all instances of a specified string in a text file, then writes it to a new file.</li>
-</ul></li>
-<li><code>text_replace</code>:
-<ul>
-<li>This function replaces all instances of a specified string in a text file with another string, then writes it to a new file.</li>
-</ul></li>
-</ul>
-<section id="text_processor-in-the-python-ecosystem" class="level2">
-<h2 class="anchored" data-anchor-id="text_processor-in-the-python-ecosystem"><code>text_processor</code> in the Python Ecosystem</h2>
-<p>The functions in <code>text_processor</code> are analogous to built-in string methods in the <a href="https://docs.python.org/3/library/index.html">Python standard library</a> such as <code>str.lower()</code>, <code>str.find()</code>, and <code>str.replace()</code>. They are differentiated by how they are built to handle text files specifically, directly reading from and writing to files rather than working directly with the text as strings.</p>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="using-text_processor" class="level2">
+<h2 class="anchored" data-anchor-id="using-text_processor">Using <code>text_processor</code></h2>
+<p>For this tutorial, we will be working with a text file containing Edgar Allan Poe’s famous poem, Annabel Lee. This file can be found in our tests repository with the file path <code>tests/poe.txt</code>.</p>
+<section id="text_find" class="level4">
+<h4 class="anchored" data-anchor-id="text_find"><code>text_find()</code></h4>
+<p>First, we want to check if this text file contains our keyword of interest, “sea”. To do this, we use <code>text_find()</code>:</p>
+<div id="f79ef0a4" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> text_processor.text_find <span class="im">import</span> text_find</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>text_find(<span class="st">"tests/poe.txt"</span>, <span class="st">"sea"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>56</code></pre>
+</div>
+</div>
+<p>The function returns a non-negative integer, 56. This tells us that the keyword “sea” exists in the text file and that it is the 56th character in the file.</p>
 </section>
-<section id="documentation" class="level2">
-<h2 class="anchored" data-anchor-id="documentation">Documentation</h2>
-<p>Our online documentation can be found <a href="https://ubc-mds.github.io/dsci_524_group28_text_processor/">here</a>.</p>
+<section id="text_lower" class="level4">
+<h4 class="anchored" data-anchor-id="text_lower"><code>text_lower()</code></h4>
+<p>We want to do some text processing so that we can identify all of the keywords in the file for model training later. To do that, we first need to be able to identify unique keywords regardless of case, so we use <code>text_lower()</code> to change all the text to lower case.</p>
+<div id="d7600f87" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> text_processor.text_lower <span class="im">import</span> text_lower</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>text_lower(<span class="st">"tests/poe.txt"</span>, <span class="st">"tests/output.txt"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
-<section id="get-started" class="level2">
-<h2 class="anchored" data-anchor-id="get-started">Get started</h2>
-<section id="cloning-the-repository" class="level3">
-<h3 class="anchored" data-anchor-id="cloning-the-repository">Cloning the Repository</h3>
-<p>Clone this GitHub repository and navigate to the project folder using the following commands:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/UBC-MDS/dsci_524_group28_text_processor.git</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> dsci_524_group28_text_processor</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="text_remove" class="level4">
+<h4 class="anchored" data-anchor-id="text_remove"><code>text_remove()</code></h4>
+<p>Next, we want to remove some stop words that we are not interested in from the text. We do not want to see “the” and “a” as keywords, so we remove them using <code>text_remove()</code>.</p>
+<div id="3c69c48c" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> text_processor.text_remove <span class="im">import</span> text_remove</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>text_remove(<span class="st">"tests/output.txt"</span>, <span class="st">"tests/output.txt"</span>, <span class="st">"the"</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>text_remove(<span class="st">"tests/output.txt"</span>, <span class="st">"tests/output.txt"</span>, <span class="st">"a"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
-<section id="setting-up-the-development-environment" class="level3">
-<h3 class="anchored" data-anchor-id="setting-up-the-development-environment">Setting Up the Development Environment</h3>
-<p>Create and activate the development environment using the <code>environment.yml</code> file:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env create <span class="at">-f</span> environment.yml</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate 524</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="text_replace" class="level4">
+<h4 class="anchored" data-anchor-id="text_replace"><code>text_replace()</code></h4>
+<p>One more thing - in this poem, Poe uses the word “sepulchre”, which is a British English spelling. However, the rest of our text files are written using American English. Therefore, we want the American English spelling of the word, which is “sepulcher”: we change this by using <code>text_replace()</code>.</p>
+<div id="f69899c3" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> text_processor.text_replace <span class="im">import</span> text_replace</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>text_replace(<span class="st">"tests/output.txt"</span>, <span class="st">"tests/output.txt"</span>, <span class="st">"sepulchre"</span>, <span class="st">"sepulcher"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
-<section id="installing-the-package" class="level3">
-<h3 class="anchored" data-anchor-id="installing-the-package">Installing the Package</h3>
-<p>To install the package locally for testing, use the following command while in the root directory:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-e</span> .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>To instead install the package from TestPyPI, use the following command:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-i</span> https://test.pypi.org/simple/ text-processor</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="running-the-tests" class="level3">
-<h3 class="anchored" data-anchor-id="running-the-tests">Running the Tests</h3>
-<p>Run the tests using the following command while in the root directory:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pytest</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="building-the-documentation" class="level3">
-<h3 class="anchored" data-anchor-id="building-the-documentation">Building the Documentation</h3>
-<p>After installing <code>text_processor</code>, the documentation can be built using Hatch with the following command:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quartodoc</span> build</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="deploying-the-documentation" class="level3">
-<h3 class="anchored" data-anchor-id="deploying-the-documentation">Deploying the Documentation</h3>
-<p>The documentation is automatically rendered and deployed once updates are pushed to the deployment branch.</p>
-</section>
-</section>
-<section id="contributors" class="level2">
-<h2 class="anchored" data-anchor-id="contributors">Contributors</h2>
-<ul>
-<li>Aitong Wu</li>
-<li>Christine Chow</li>
-<li>Julia Zhang</li>
-<li>Vy Phan</li>
-</ul>
-</section>
-<section id="copyright" class="level2">
-<h2 class="anchored" data-anchor-id="copyright">Copyright</h2>
-<ul>
-<li>Copyright © 2026 Julia Zhang, Vy Phan, Aitong Wu, Christine Chow.</li>
-<li>Free software distributed under the <a href="./LICENSE">MIT License</a>.</li>
-</ul>
+<section id="final-output" class="level3">
+<h3 class="anchored" data-anchor-id="final-output">Final output</h3>
+<p>We now have a text file <code>output.txt</code> with the following processed text:</p>
+<div id="0920de75" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"tests/output.txt"</span>, <span class="st">"r"</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>) <span class="im">as</span> f:</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> f.read()</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>it was many and many  year ago,
+   in  kingdom by  sea,
+that  maiden there lived whom you may know
+   by  name of annabel lee;
+and this maiden she lived with no other thought
+   than to love and be loved by me.
+
+i was  child and she was  child,
+   in this kingdom by  sea,
+but we loved with  love that was more than love—
+   i and my annabel lee—
+with  love that  wingèd seraphs of heaven
+   coveted her and me.
+
+and this was  reason that, long ago,
+   in this kingdom by  sea,
+ wind blew out of  cloud, chilling
+   my beautiful annabel lee;
+so that her highborn kinsmen came
+   and bore her away from me,
+to shut her up in  sepulcher
+   in this kingdom by  sea.
+
+ angels, not half so happy in heaven,
+   went envying her and me-
+yes!—that was  reason (as all men know,
+   in this kingdom by  sea)
+that  wind came out of  cloud by night,
+   chilling and killing my annabel lee.
+
+but our love it was stronger by far than  love
+   of those who were older than we—
+   of many far wiser than we—
+and neither  angels in heaven above
+   nor  demons down under  sea
+can ever dissever my soul from  soul
+   of  beautiful annabel lee;
+
+for  moon never beams, without bringing me dreams
+   of  beautiful annabel lee;
+and  stars never rise, but i feel  bright eyes
+   of  beautiful annabel lee;
+and so, all  night-tide, i lie down by  side
+   of my darling—my darling—my life and my bride,
+   in her sepulcher there by  sea—
+   in her tomb by  sounding sea.</code></pre>
+</div>
+</div>
 
 
 </section>

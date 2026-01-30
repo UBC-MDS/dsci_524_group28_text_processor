@@ -126,8 +126,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Home</span></a>
+    <a class="nav-link" href="./tutorial.html"> 
+<span class="menu-text">Tutorial</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./reference/index.html" aria-current="page"> 
@@ -256,10 +256,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <table class="caption-top table">
 <tbody>
 <tr class="odd">
-<td>Package</td>
-<td><a href="https://test.pypi.org/project/text-processor/"><img src="https://img.shields.io/pypi/v/text-processor.svg" class="img-fluid" alt="Latest PyPI Version"></a> <a href="https://test.pypi.org/project/text-processor/"><img src="https://img.shields.io/pypi/pyversions/text-processor.svg" class="img-fluid" alt="Supported Python Versions"></a></td>
+<td>CI/CD</td>
+<td><a href="https://github.com/UBC-MDS/dsci_524_group28_text_processor/actions/workflows/build.yml"><img src="https://github.com/UBC-MDS/dsci_524_group28_text_processor/actions/workflows/build.yml/badge.svg" class="img-fluid" alt="CI"></a> <a href="https://codecov.io/gh/UBC-MDS/dsci_524_group28_text_processor"><img src="https://codecov.io/gh/UBC-MDS/dsci_524_group28_text_processor/graph/badge.svg" class="img-fluid" alt="codecov"></a></td>
 </tr>
 <tr class="even">
+<td>Package</td>
+<td><a href="https://test.pypi.org/project/text-processor/"><img src="https://img.shields.io/pypi/pyversions/text-processor.svg" class="img-fluid" alt="Supported Python Versions"></a></td>
+</tr>
+<tr class="odd">
 <td>Meta</td>
 <td><a href="./CODE_OF_CONDUCT.html"><img src="https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg" class="img-fluid" alt="Code of Conduct"></a></td>
 </tr>
@@ -285,9 +289,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>This function replaces all instances of a specified string in a text file with another string, then writes it to a new file.</li>
 </ul></li>
 </ul>
-<section id="text_processor-in-the-python-ecosystem" class="level2">
-<h2 class="anchored" data-anchor-id="text_processor-in-the-python-ecosystem"><code>text_processor</code> in the Python Ecosystem</h2>
-<p>The functions in <code>text_processor</code> are analogous to built-in string methods in the <a href="https://docs.python.org/3/library/index.html">Python standard library</a> such as <code>str.lower()</code>, <code>str.find()</code>, and <code>str.replace()</code>. They are differentiated by how they are built to handle text files specifically, directly reading from and writing to files rather than working directly with the text as strings.</p>
+<section id="installation" class="level2">
+<h2 class="anchored" data-anchor-id="installation">Installation</h2>
+<p>To install the package from TestPyPI, use the following command:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">--no-cache-dir</span> <span class="at">--index-url</span> https://test.pypi.org/simple/ text-processor</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="documentation" class="level2">
 <h2 class="anchored" data-anchor-id="documentation">Documentation</h2>
@@ -298,21 +303,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="cloning-the-repository" class="level3">
 <h3 class="anchored" data-anchor-id="cloning-the-repository">Cloning the Repository</h3>
 <p>Clone this GitHub repository and navigate to the project folder using the following commands:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/UBC-MDS/dsci_524_group28_text_processor.git</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> dsci_524_group28_text_processor</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/UBC-MDS/dsci_524_group28_text_processor.git</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> dsci_524_group28_text_processor</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="setting-up-the-development-environment" class="level3">
 <h3 class="anchored" data-anchor-id="setting-up-the-development-environment">Setting Up the Development Environment</h3>
 <p>Create and activate the development environment using the <code>environment.yml</code> file:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env create <span class="at">-f</span> environment.yml</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate 524</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env create <span class="at">-f</span> environment.yml</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate 524</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="installing-the-package" class="level3">
-<h3 class="anchored" data-anchor-id="installing-the-package">Installing the Package</h3>
+<section id="locally-installing-the-package" class="level3">
+<h3 class="anchored" data-anchor-id="locally-installing-the-package">Locally Installing the Package</h3>
 <p>To install the package locally for testing, use the following command while in the root directory:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-e</span> .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>To instead install the package from TestPyPI, use the following command:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-i</span> https://test.pypi.org/simple/ text-processor</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-e</span> .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="running-the-tests" class="level3">
 <h3 class="anchored" data-anchor-id="running-the-tests">Running the Tests</h3>
@@ -328,6 +331,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="deploying-the-documentation">Deploying the Documentation</h3>
 <p>The documentation is automatically rendered and deployed once updates are pushed to the deployment branch.</p>
 </section>
+</section>
+<section id="text_processor-in-the-python-ecosystem" class="level2">
+<h2 class="anchored" data-anchor-id="text_processor-in-the-python-ecosystem"><code>text_processor</code> in the Python Ecosystem</h2>
+<p>The functions in <code>text_processor</code> are analogous to built-in string methods in the <a href="https://docs.python.org/3/library/index.html">Python standard library</a> such as <code>str.lower()</code>, <code>str.find()</code>, and <code>str.replace()</code>. They are differentiated by how they are built to handle text files specifically, directly reading from and writing to files rather than working directly with the text as strings.</p>
 </section>
 <section id="contributors" class="level2">
 <h2 class="anchored" data-anchor-id="contributors">Contributors</h2>
