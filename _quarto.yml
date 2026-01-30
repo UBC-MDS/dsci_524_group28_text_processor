@@ -7,6 +7,7 @@ project:
     - "CODE_OF_CONDUCT.md"
     - "CONTRIBUTING.md"
     - "LICENSE.md"
+    - "reflection.md"
 
 website:
   title: "Text Processor"
@@ -26,6 +27,8 @@ website:
           - CONTRIBUTING.md
           - text: "LICENSE"
             href: LICENSE.md
+          - text: "Retrospective Reflection"
+            href: reflection.md
       - text: "---"
       - section: "References"
         contents:
