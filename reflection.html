@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>license – Text Processor</title>
+<title>reflection – Text Processor</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./README.html">Getting Started</a></li><li class="breadcrumb-item"><a href="./LICENSE.html">LICENSE</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./README.html">Getting Started</a></li><li class="breadcrumb-item"><a href="./reflection.html">Retrospective Reflection</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -150,13 +150,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./LICENSE.html" class="sidebar-item-text sidebar-link active">
+  <a href="./LICENSE.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">LICENSE</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reflection.html" class="sidebar-item-text sidebar-link">
+  <a href="./reflection.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Retrospective Reflection</span></a>
   </div>
 </li>
@@ -211,18 +211,39 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./README.html">Getting Started</a></li><li class="breadcrumb-item"><a href="./LICENSE.html">LICENSE</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./README.html">Getting Started</a></li><li class="breadcrumb-item"><a href="./reflection.html">Retrospective Reflection</a></li></ol></nav></header>
 
 
 
 
-<p>MIT License</p>
-<p>Copyright (c) 2026 Julia Zhang, Vy Phan, Aitong Wu, Christine Chow</p>
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
-<p>The above copyright notice and this permission notice (including the next paragraph) shall be included in all copies or substantial portions of the Software.</p>
-<p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<section id="reflection-tools-infrastructure-and-practices" class="level1">
+<h1>Reflection: Tools, Infrastructure, and Practices</h1>
+<p>During the development of text_processor, we utilized a collaborative software development workflow that focused on building and maintaining a software package for use by others. Specifically we used GitHub Flow to manage our development and implemented main branch protection to ensure all code was reviewed before merging into main. We also utilized the GitHub project board and issue tracking to maintain accountability and visibility within our team.</p>
+<p>Our documentation pipeline leveraged quartodoc to automatically generate the API reference pages directly from our docstrings, ensuring that the documentation would always synchronize with code changes. We used Quarto to render the website and GitHub pages for public hosting. To manage the software life cycle, we implemented continuous integration (CI) through GitHub Actions. This infrastructure handled the quality control by automatically running the pytest suite and using Ruff for code linting and formatting.</p>
+<p>We analyzed our GitHub project insights to evaluate our team’s velocity and workload contributions over the 4 milestones of this software development. The burn up chart shows that there was an increase in requirements for milestones 2 and 4, coinciding with the heavy development phases of the project. Note: milestone 4 includes cleanup and addressing peer reviews from TAs and fellow classmates which created a bottleneck at the end of the software completion. Burn up by status confirms our highest velocity period was during milestone 2 with 18 completed tasks, which is more than double the tasks of milestone 1 and milestone 3. In terms of workload and contributions, the Burn up by assignee demonstrates that there was a relatively balanced effort across the team.</p>
+</section>
+<section id="daki-analysis-drop-add-keep-improve" class="level1">
+<h1>DAKI Analysis (Drop, Add, Keep, Improve)</h1>
+<p>Reflecting on our workflows using the DAKI framework, we have identified the following:</p>
+<ul>
+<li><p>Drop: We would drop the reliance on manual versioning and move towards the automated tagging to reduce overhead</p></li>
+<li><p>Add: We would implement standardized Issue Templates with a mandatory “Definition of Done” checklist. This will ensure that the reviewer will only recieve code that meets our quality standards.</p></li>
+<li><p>Keep: We would keep the usage of the centralized project task board for visibility and accountability for the team.</p></li>
+<li><p>Improve: Separating tasks into smaller sub-issues to help track progress more accurately</p></li>
+</ul>
+</section>
+<section id="scaling-the-project" class="level1">
+<h1>Scaling the Project</h1>
+<p>If we were to scale text_processor, we would implement the following:</p>
+<ul>
+<li><p>Containerization: we would transition to a containerized infrastructure eg Docker to simplify cross platform deployments for our users.</p></li>
+<li><p>Expand test matrix: We would extend the CI testing to run across a matrix of multiple Python versions (3.10, 3.11, and 3.12) and operating systems to ensure compatibility for all users.</p></li>
+<li><p>Transition to Git Flow: To manage more complex releases, we would move from GitHub Flow to Git Flow. In this setup, new features would be developed on separate branches and merged into a dedicated develop branch, and only after the code has been thoroughly tested and reviewed is it officially released onto the main branch. This structure ensures that only well tested and stable code reaches the production environment.</p></li>
+<li><p>Implementation of CODEOWNERS: To manage the growing contributor base, we would implement a CODEOWNER file. This would allow automated assignment to specific reviewers for pull requests based on files being modified. This will ensure that domain experts will always oversee the changes to the codebase.</p></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
