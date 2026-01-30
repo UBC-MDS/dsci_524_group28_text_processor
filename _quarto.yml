@@ -12,8 +12,6 @@ website:
   title: "Text Processor"
   navbar:
     left:
-      - text: "Home"
-        href: index.qmd
       - text: "Tutorial"
         href: tutorial.qmd
       - text: "Reference"
