@@ -6,7 +6,7 @@
     "section": "",
     "text": "Reflection: Tools, Infrastructure, and Practices\nDuring the development of text_processor, we utilized a collaborative software development workflow that focused on building and maintaining a software package for use by others. Specifically we used GitHub Flow to manage our development and implemented main branch protection to ensure all code was reviewed before merging into main. We also utilized the GitHub project board and issue tracking to maintain accountability and visibility within our team.\nOur documentation pipeline leveraged quartodoc to automatically generate the API reference pages directly from our docstrings, ensuring that the documentation would always synchronize with code changes. We used Quarto to render the website and GitHub pages for public hosting. To manage the software life cycle, we implemented continuous integration (CI) through GitHub Actions. This infrastructure handled the quality control by automatically running the pytest suite and using Ruff for code linting and formatting.\nWe analyzed our GitHub project insights to evaluate our team’s velocity and workload contributions over the 4 milestones of this software development. The burn up chart shows that there was an increase in requirements for milestones 2 and 4, coinciding with the heavy development phases of the project. Note: milestone 4 includes cleanup and addressing peer reviews from TAs and fellow classmates which created a bottleneck at the end of the software completion. Burn up by status confirms our highest velocity period was during milestone 2 with 18 completed tasks, which is more than double the tasks of milestone 1 and milestone 3. In terms of workload and contributions, the Burn up by assignee demonstrates that there was a relatively balanced effort across the team.\n\n\nDAKI Analysis (Drop, Add, Keep, Improve)\nReflecting on our workflows using the DAKI framework, we have identified the following:\n\nDrop: We would drop the reliance on manual versioning and move towards the automated tagging to reduce overhead\nAdd: We would implement standardized Issue Templates with a mandatory “Definition of Done” checklist. This will ensure that the reviewer will only recieve code that meets our quality standards.\nKeep: We would keep the usage of the centralized project task board for visibility and accountability for the team.\nImprove: Separating tasks into smaller sub-issues to help track progress more accurately\n\n\n\nScaling the Project\nIf we were to scale text_processor, we would implement the following:\n\nContainerization: we would transition to a containerized infrastructure eg Docker to simplify cross platform deployments for our users.\nExpand test matrix: We would extend the CI testing to run across a matrix of multiple Python versions (3.10, 3.11, and 3.12) and operating systems to ensure compatibility for all users.\nTransition to Git Flow: To manage more complex releases, we would move from GitHub Flow to Git Flow. In this setup, new features would be developed on separate branches and merged into a dedicated develop branch, and only after the code has been thoroughly tested and reviewed is it officially released onto the main branch. This structure ensures that only well tested and stable code reaches the production environment.\nImplementation of CODEOWNERS: To manage the growing contributor base, we would implement a CODEOWNER file. This would allow automated assignment to specific reviewers for pull requests based on files being modified. This will ensure that domain experts will always oversee the changes to the codebase.",
     "crumbs": [
-      "Tutorial",
+      "Home",
       "Getting Started",
       "Retrospective Reflection"
     ]
@@ -18,7 +18,7 @@
     "section": "",
     "text": "Contributions of all kinds are welcome here, and they are greatly appreciated! Every little bit helps, and credit will always be given.\n\n\nYou can contribute in many ways, for example:\n\nReport bugs\nFix Bugs\nImplement Features\nWrite Documentation\nSubmit Feedback\n\n\n\nReport bugs at here.\nIf you are reporting a bug, please follow the template guidelines. The more detailed your report, the easier and thus faster we can help you.\n\n\n\nLook through the GitHub issues for bugs. Anything labelled with bug and help wanted is open to whoever wants to implement it. When you decide to work on such an issue, please assign yourself to it and add a comment that you’ll be working on that, too. If you see another issue without the help wanted label, just post a comment, the maintainers are usually happy for any support that they can get.\n\n\n\nLook through the GitHub issues for features. Anything labelled with enhancement and help wanted is open to whoever wants to implement it. As for fixing bugs, please assign yourself to the issue and add a comment that you’ll be working on that, too. If another enhancement catches your fancy, but it doesn’t have the help wanted label, just post a comment, the maintainers are usually happy for any support that they can get.\n\n\n\nText Processor could always use more documentation, whether as part of the official documentation, in docstrings, or even on the web in blog posts, articles, and such. Just open an issue to let us know what you will be working on so that we can provide you with guidance.\n\n\n\nThe best way to send feedback is to file an issue at here. If your feedback fits the format of one of the issue templates, please use that. Remember that this is a volunteer-driven project and everybody has limited time.\n\n\n\n\nWe use GitHub Flow - industry-standard contribution workflow:\n\nFork the repository on GitHub: https://github.com/UBC-MDS/dsci_524_group28_text_processor\nClone your fork locally (if you want to work locally)\ngit clone git@github.com:your_name_here/dsci_524_group28_text_processor.git\nInstall hatch.\nCreate a branch for local development using the default branch (typically main) as a starting point. Use fix or feat as a prefix for your branch name.\nOur branch name recommendation: &lt;type&gt;/&lt;short-purpose&gt;-&lt;author&gt;\ntype = fix, feat, docs\nshort-purpose = purpose of the change\nauthor = your GitHub username\nExample: docs/update-contributing-guide-vtphan\nThen run:\ngit checkout main\ngit checkout -b fix-name-of-your-bugfix\nNow you can make your changes locally.\nWhen you’re done making changes, apply the quality assurance tools and check that your changes pass our test suite. This is all included with tox\nhatch run test:run\nCommit your changes and push your branch to GitHub.\nKeep commits small and meaningful.\nUse semantic commit messages (https://www.conventionalcommits.org/).\ngit add .\ngit commit -m \"fix: summarize your changes\"\ngit push -u origin fix-name-of-your-bugfix\nOpen the link displayed in the message when pushing your new branch in order to submit a pull request.\n\n\n\nBefore you submit a pull request, check that it meets these guidelines:\n\nThe pull request should include tests.\nIf the pull request adds functionality, the docs should be updated. Put your new functionality into a function with a docstring.\nYour pull request will automatically be checked by the full test suite. It needs to pass all of them before it can be considered for merging.\n\n\n\n\n\nOnly maintainers can merge Pull Request\nA PR can only be merged when:\n\nAt least 1 approving review is given\nAll requested changes are resolved\n\nThe contributor branch will be deleted after merge\nForce-pushing is not allowed after a PR is opened unless requested by a maintainer",
     "crumbs": [
-      "Tutorial",
+      "Home",
       "Getting Started",
       "Contributing"
     ]
@@ -30,7 +30,7 @@
     "section": "",
     "text": "You can contribute in many ways, for example:\n\nReport bugs\nFix Bugs\nImplement Features\nWrite Documentation\nSubmit Feedback\n\n\n\nReport bugs at here.\nIf you are reporting a bug, please follow the template guidelines. The more detailed your report, the easier and thus faster we can help you.\n\n\n\nLook through the GitHub issues for bugs. Anything labelled with bug and help wanted is open to whoever wants to implement it. When you decide to work on such an issue, please assign yourself to it and add a comment that you’ll be working on that, too. If you see another issue without the help wanted label, just post a comment, the maintainers are usually happy for any support that they can get.\n\n\n\nLook through the GitHub issues for features. Anything labelled with enhancement and help wanted is open to whoever wants to implement it. As for fixing bugs, please assign yourself to the issue and add a comment that you’ll be working on that, too. If another enhancement catches your fancy, but it doesn’t have the help wanted label, just post a comment, the maintainers are usually happy for any support that they can get.\n\n\n\nText Processor could always use more documentation, whether as part of the official documentation, in docstrings, or even on the web in blog posts, articles, and such. Just open an issue to let us know what you will be working on so that we can provide you with guidance.\n\n\n\nThe best way to send feedback is to file an issue at here. If your feedback fits the format of one of the issue templates, please use that. Remember that this is a volunteer-driven project and everybody has limited time.",
     "crumbs": [
-      "Tutorial",
+      "Home",
       "Getting Started",
       "Contributing"
     ]
@@ -42,7 +42,7 @@
     "section": "",
     "text": "We use GitHub Flow - industry-standard contribution workflow:\n\nFork the repository on GitHub: https://github.com/UBC-MDS/dsci_524_group28_text_processor\nClone your fork locally (if you want to work locally)\ngit clone git@github.com:your_name_here/dsci_524_group28_text_processor.git\nInstall hatch.\nCreate a branch for local development using the default branch (typically main) as a starting point. Use fix or feat as a prefix for your branch name.\nOur branch name recommendation: &lt;type&gt;/&lt;short-purpose&gt;-&lt;author&gt;\ntype = fix, feat, docs\nshort-purpose = purpose of the change\nauthor = your GitHub username\nExample: docs/update-contributing-guide-vtphan\nThen run:\ngit checkout main\ngit checkout -b fix-name-of-your-bugfix\nNow you can make your changes locally.\nWhen you’re done making changes, apply the quality assurance tools and check that your changes pass our test suite. This is all included with tox\nhatch run test:run\nCommit your changes and push your branch to GitHub.\nKeep commits small and meaningful.\nUse semantic commit messages (https://www.conventionalcommits.org/).\ngit add .\ngit commit -m \"fix: summarize your changes\"\ngit push -u origin fix-name-of-your-bugfix\nOpen the link displayed in the message when pushing your new branch in order to submit a pull request.\n\n\n\nBefore you submit a pull request, check that it meets these guidelines:\n\nThe pull request should include tests.\nIf the pull request adds functionality, the docs should be updated. Put your new functionality into a function with a docstring.\nYour pull request will automatically be checked by the full test suite. It needs to pass all of them before it can be considered for merging.\n\n\n\n\n\nOnly maintainers can merge Pull Request\nA PR can only be merged when:\n\nAt least 1 approving review is given\nAll requested changes are resolved\n\nThe contributor branch will be deleted after merge\nForce-pushing is not allowed after a PR is opened unless requested by a maintainer",
     "crumbs": [
-      "Tutorial",
+      "Home",
       "Getting Started",
       "Contributing"
     ]
@@ -52,45 +52,9 @@
     "href": "README.html",
     "title": "Welcome to Text Processor",
     "section": "",
-    "text": "CI/CD\n \n\n\nPackage\n\n\n\nMeta\n\n\n\n\ntext_processor is a package that assists in the processing of text files in Python. This allows users to generate insights on and clean raw text data without needing to manually read the file or write the text to a new file, and is particularly useful in cases where users only need to perform a simple operation on the text file.\nThe package consists of the following functions:\n\ntext_lower:\n\nThis function converts all characters in a text file to lower case and writes it to a specified file.\n\ntext_find:\n\nThis function finds the index of the first instance of a specified string in a text file. If the string does not exist in the file, it will return -1.\n\ntext_remove:\n\nThis function removes all instances of a specified string in a text file, then writes it to a new file.\n\ntext_replace:\n\nThis function replaces all instances of a specified string in a text file with another string, then writes it to a new file.\n\n\n\n\nTo install the package from TestPyPI, use the following command:\npip install --no-cache-dir --index-url https://test.pypi.org/simple/ text-processor\n\n\n\nOur online documentation can be found here.\n\n\n\n\n\nClone this GitHub repository and navigate to the project folder using the following commands:\ngit clone https://github.com/UBC-MDS/dsci_524_group28_text_processor.git\ncd dsci_524_group28_text_processor\n\n\n\nCreate and activate the development environment using the environment.yml file:\nconda env create -f environment.yml\nconda activate 524\n\n\n\nTo install the package locally for testing, use the following command while in the root directory:\npip install -e .\n\n\n\nRun the tests using the following command while in the root directory:\npytest\n\n\n\nAfter installing text_processor, the documentation can be built using Hatch with the following command:\nquartodoc build\n\n\n\nThe documentation is automatically rendered and deployed once updates are pushed to the deployment branch.\n\n\n\n\nThe functions in text_processor are analogous to built-in string methods in the Python standard library such as str.lower(), str.find(), and str.replace(). They are differentiated by how they are built to handle text files specifically, directly reading from and writing to files rather than working directly with the text as strings.\n\n\n\n\nAitong Wu\nChristine Chow\nJulia Zhang\nVy Phan\n\n\n\n\n\nCopyright © 2026 Julia Zhang, Vy Phan, Aitong Wu, Christine Chow.\nFree software distributed under the MIT License.",
+    "text": "Package\n \n\n\nMeta\n\n\n\n\ntext_processor is a package that assists in the processing of text files in Python. This allows users to generate insights on and clean raw text data without needing to manually read the file or write the text to a new file, and is particularly useful in cases where users only need to perform a simple operation on the text file.\nThe package consists of the following functions:\n\ntext_lower:\n\nThis function converts all characters in a text file to lower case and writes it to a specified file.\n\ntext_find:\n\nThis function finds the index of the first instance of a specified string in a text file. If the string does not exist in the file, it will return -1.\n\ntext_remove:\n\nThis function removes all instances of a specified string in a text file, then writes it to a new file.\n\ntext_replace:\n\nThis function replaces all instances of a specified string in a text file with another string, then writes it to a new file.\n\n\n\n\nThe functions in text_processor are analogous to built-in string methods in the Python standard library such as str.lower(), str.find(), and str.replace(). They are differentiated by how they are built to handle text files specifically, directly reading from and writing to files rather than working directly with the text as strings.\n\n\n\nOur online documentation can be found here.\n\n\n\n\n\nClone this GitHub repository and navigate to the project folder using the following commands:\ngit clone https://github.com/UBC-MDS/dsci_524_group28_text_processor.git\ncd dsci_524_group28_text_processor\n\n\n\nCreate and activate the development environment using the environment.yml file:\nconda env create -f environment.yml\nconda activate 524\n\n\n\nTo install the package locally for testing, use the following command while in the root directory:\npip install -e .\nTo instead install the package from TestPyPI, use the following command:\npip install -i https://test.pypi.org/simple/ text-processor\n\n\n\nRun the tests using the following command while in the root directory:\npytest\n\n\n\nAfter installing text_processor, the documentation can be built using Hatch with the following command:\nquartodoc build\n\n\n\nThe documentation is automatically rendered and deployed once updates are pushed to the deployment branch.\n\n\n\n\n\nAitong Wu\nChristine Chow\nJulia Zhang\nVy Phan\n\n\n\n\n\nCopyright © 2026 Julia Zhang, Vy Phan, Aitong Wu, Christine Chow.\nFree software distributed under the MIT License.",
     "crumbs": [
-      "Tutorial",
-      "Getting Started",
-      "Welcome to Text Processor"
-    ]
-  },
-  {
-    "objectID": "README.html#installation",
-    "href": "README.html#installation",
-    "title": "Welcome to Text Processor",
-    "section": "",
-    "text": "To install the package from TestPyPI, use the following command:\npip install --no-cache-dir --index-url https://test.pypi.org/simple/ text-processor",
-    "crumbs": [
-      "Tutorial",
-      "Getting Started",
-      "Welcome to Text Processor"
-    ]
-  },
-  {
-    "objectID": "README.html#documentation",
-    "href": "README.html#documentation",
-    "title": "Welcome to Text Processor",
-    "section": "",
-    "text": "Our online documentation can be found here.",
-    "crumbs": [
-      "Tutorial",
-      "Getting Started",
-      "Welcome to Text Processor"
-    ]
-  },
-  {
-    "objectID": "README.html#get-started",
-    "href": "README.html#get-started",
-    "title": "Welcome to Text Processor",
-    "section": "",
-    "text": "Clone this GitHub repository and navigate to the project folder using the following commands:\ngit clone https://github.com/UBC-MDS/dsci_524_group28_text_processor.git\ncd dsci_524_group28_text_processor\n\n\n\nCreate and activate the development environment using the environment.yml file:\nconda env create -f environment.yml\nconda activate 524\n\n\n\nTo install the package locally for testing, use the following command while in the root directory:\npip install -e .\n\n\n\nRun the tests using the following command while in the root directory:\npytest\n\n\n\nAfter installing text_processor, the documentation can be built using Hatch with the following command:\nquartodoc build\n\n\n\nThe documentation is automatically rendered and deployed once updates are pushed to the deployment branch.",
-    "crumbs": [
-      "Tutorial",
+      "Home",
       "Getting Started",
       "Welcome to Text Processor"
     ]
@@ -102,7 +66,31 @@
     "section": "",
     "text": "The functions in text_processor are analogous to built-in string methods in the Python standard library such as str.lower(), str.find(), and str.replace(). They are differentiated by how they are built to handle text files specifically, directly reading from and writing to files rather than working directly with the text as strings.",
     "crumbs": [
-      "Tutorial",
+      "Home",
+      "Getting Started",
+      "Welcome to Text Processor"
+    ]
+  },
+  {
+    "objectID": "README.html#documentation",
+    "href": "README.html#documentation",
+    "title": "Welcome to Text Processor",
+    "section": "",
+    "text": "Our online documentation can be found here.",
+    "crumbs": [
+      "Home",
+      "Getting Started",
+      "Welcome to Text Processor"
+    ]
+  },
+  {
+    "objectID": "README.html#get-started",
+    "href": "README.html#get-started",
+    "title": "Welcome to Text Processor",
+    "section": "",
+    "text": "Clone this GitHub repository and navigate to the project folder using the following commands:\ngit clone https://github.com/UBC-MDS/dsci_524_group28_text_processor.git\ncd dsci_524_group28_text_processor\n\n\n\nCreate and activate the development environment using the environment.yml file:\nconda env create -f environment.yml\nconda activate 524\n\n\n\nTo install the package locally for testing, use the following command while in the root directory:\npip install -e .\nTo instead install the package from TestPyPI, use the following command:\npip install -i https://test.pypi.org/simple/ text-processor\n\n\n\nRun the tests using the following command while in the root directory:\npytest\n\n\n\nAfter installing text_processor, the documentation can be built using Hatch with the following command:\nquartodoc build\n\n\n\nThe documentation is automatically rendered and deployed once updates are pushed to the deployment branch.",
+    "crumbs": [
+      "Home",
       "Getting Started",
       "Welcome to Text Processor"
     ]
@@ -114,7 +102,7 @@
     "section": "",
     "text": "Aitong Wu\nChristine Chow\nJulia Zhang\nVy Phan",
     "crumbs": [
-      "Tutorial",
+      "Home",
       "Getting Started",
       "Welcome to Text Processor"
     ]
@@ -126,105 +114,9 @@
     "section": "",
     "text": "Copyright © 2026 Julia Zhang, Vy Phan, Aitong Wu, Christine Chow.\nFree software distributed under the MIT License.",
     "crumbs": [
-      "Tutorial",
+      "Home",
       "Getting Started",
       "Welcome to Text Processor"
-    ]
-  },
-  {
-    "objectID": "reference/text_replace.html",
-    "href": "reference/text_replace.html",
-    "title": "text_replace",
-    "section": "",
-    "text": "text_replace\nA module that reads a text file, replaces all instances of a string with another string, then writes the output to a new file.\n\n\n\n\n\nName\nDescription\n\n\n\n\ntext_replace\nReplaces all instances of a string with another string in a text\n\n\n\n\n\ntext_replace.text_replace(input_path, output_path, old, new)\nReplaces all instances of a string with another string in a text file, then writes the result into another file. If the old string does not exist in the file, then the output will be the same unaltered file.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ninput_path\nstr\nAn existing file path to the text file to read. The file must be readable.\nrequired\n\n\noutput_path\nstr\nThe file path to write the replaced text to. The file, should it exist, must be writeable.\nrequired\n\n\nold\nstr\nA (non-empty) string to replace.\nrequired\n\n\nnew\nstr\nThe replacement string.\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nNone\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input_path, output_path, old, or new is not a string.\n\n\n\nValueError\nIf old is an empty string, or the input_path or output_path are not paths to .txt files.\n\n\n\n\n\n\n&gt;&gt;&gt; text_replace(\"example.txt\", \"replaced.txt\", \"color\", \"colour\")\n# replaced.txt contains the contents of example.txt, but with all\n# instances of 'color' replaced with \"colour\"",
-    "crumbs": [
-      "Tutorial",
-      "References",
-      "text_replace"
-    ]
-  },
-  {
-    "objectID": "reference/text_replace.html#functions",
-    "href": "reference/text_replace.html#functions",
-    "title": "text_replace",
-    "section": "",
-    "text": "Name\nDescription\n\n\n\n\ntext_replace\nReplaces all instances of a string with another string in a text\n\n\n\n\n\ntext_replace.text_replace(input_path, output_path, old, new)\nReplaces all instances of a string with another string in a text file, then writes the result into another file. If the old string does not exist in the file, then the output will be the same unaltered file.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ninput_path\nstr\nAn existing file path to the text file to read. The file must be readable.\nrequired\n\n\noutput_path\nstr\nThe file path to write the replaced text to. The file, should it exist, must be writeable.\nrequired\n\n\nold\nstr\nA (non-empty) string to replace.\nrequired\n\n\nnew\nstr\nThe replacement string.\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nNone\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input_path, output_path, old, or new is not a string.\n\n\n\nValueError\nIf old is an empty string, or the input_path or output_path are not paths to .txt files.\n\n\n\n\n\n\n&gt;&gt;&gt; text_replace(\"example.txt\", \"replaced.txt\", \"color\", \"colour\")\n# replaced.txt contains the contents of example.txt, but with all\n# instances of 'color' replaced with \"colour\"",
-    "crumbs": [
-      "Tutorial",
-      "References",
-      "text_replace"
-    ]
-  },
-  {
-    "objectID": "reference/text_lower.html",
-    "href": "reference/text_lower.html",
-    "title": "text_lower",
-    "section": "",
-    "text": "text_lower\nA module that reads a UTF-8 text file, converts all uppercase characters to lowercase, then writes the output to a new file.\n\n\n\n\n\nName\nDescription\n\n\n\n\ntext_lower\nConverts all characters in a text file to lowercase, then writes the result into\n\n\n\n\n\ntext_lower.text_lower(input_path, output_path)\nConverts all characters in a text file to lowercase, then writes the result into another file. If empty input file is provided, it will create an empty output file.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ninput_path\nstr\nPath to the input text file. Must be a string ending with .txt\nrequired\n\n\noutput_path\nstr\nPath to write the processed text file. Must be a string ending with .txt. If input and output paths are the same, the input file will be overwritten.\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nNone\nFunction writes directly to a UTF-8 file and returns None.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input_path or output_path is not a string.\n\n\n\nValueError\nIf input_path or output_path does not have a .txt file extension.\n\n\n\nFileNotFoundError\nIf the input file does not exist.\n\n\n\nOSError\nIf there is an error reading from or writing to the file.\n\n\n\n\n\n\n&gt;&gt;&gt; text_lower(\"example.txt\", \"example_lower.txt\")\n# example_lower.txt contains the contents of example.txt, but with all\n# instances of uppercase characters replaced with lowercase equivalents",
-    "crumbs": [
-      "Tutorial",
-      "References",
-      "text_lower"
-    ]
-  },
-  {
-    "objectID": "reference/text_lower.html#functions",
-    "href": "reference/text_lower.html#functions",
-    "title": "text_lower",
-    "section": "",
-    "text": "Name\nDescription\n\n\n\n\ntext_lower\nConverts all characters in a text file to lowercase, then writes the result into\n\n\n\n\n\ntext_lower.text_lower(input_path, output_path)\nConverts all characters in a text file to lowercase, then writes the result into another file. If empty input file is provided, it will create an empty output file.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ninput_path\nstr\nPath to the input text file. Must be a string ending with .txt\nrequired\n\n\noutput_path\nstr\nPath to write the processed text file. Must be a string ending with .txt. If input and output paths are the same, the input file will be overwritten.\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nNone\nFunction writes directly to a UTF-8 file and returns None.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input_path or output_path is not a string.\n\n\n\nValueError\nIf input_path or output_path does not have a .txt file extension.\n\n\n\nFileNotFoundError\nIf the input file does not exist.\n\n\n\nOSError\nIf there is an error reading from or writing to the file.\n\n\n\n\n\n\n&gt;&gt;&gt; text_lower(\"example.txt\", \"example_lower.txt\")\n# example_lower.txt contains the contents of example.txt, but with all\n# instances of uppercase characters replaced with lowercase equivalents",
-    "crumbs": [
-      "Tutorial",
-      "References",
-      "text_lower"
-    ]
-  },
-  {
-    "objectID": "reference/index.html",
-    "href": "reference/index.html",
-    "title": "Function reference",
-    "section": "",
-    "text": "Functions to help you process text\n\n\n\ntext_find\nA module that reads a text file to locate the first occurrence of ‘keyword’ in text\n\n\ntext_lower\nA module that reads a UTF-8 text file, converts all uppercase characters to lowercase,\n\n\ntext_remove\nA module that provides functionality to remove a specified word from a text file.\n\n\ntext_replace\nA module that reads a text file, replaces all instances of a string",
-    "crumbs": [
-      "Tutorial",
-      "References",
-      "Function reference"
-    ]
-  },
-  {
-    "objectID": "reference/index.html#main-api",
-    "href": "reference/index.html#main-api",
-    "title": "Function reference",
-    "section": "",
-    "text": "Functions to help you process text\n\n\n\ntext_find\nA module that reads a text file to locate the first occurrence of ‘keyword’ in text\n\n\ntext_lower\nA module that reads a UTF-8 text file, converts all uppercase characters to lowercase,\n\n\ntext_remove\nA module that provides functionality to remove a specified word from a text file.\n\n\ntext_replace\nA module that reads a text file, replaces all instances of a string",
-    "crumbs": [
-      "Tutorial",
-      "References",
-      "Function reference"
-    ]
-  },
-  {
-    "objectID": "reference/text_find.html",
-    "href": "reference/text_find.html",
-    "title": "text_find",
-    "section": "",
-    "text": "text_find\nA module that reads a text file to locate the first occurrence of ‘keyword’ in text and returns its character index.\nNote: The returned index refers to the text read from the processed file (e.g., lowercased / cleaned by earlier steps), not the raw file text.\n\n\n\n\n\nName\nDescription\n\n\n\n\ntext_find\nFinds the first whole-word instance of keyword in a text file.\n\n\n\n\n\ntext_find.text_find(input_path, keyword)\nFinds the first whole-word instance of keyword in a text file.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ninput_path\nstr\nPath to the input text file. Must be a string ending with .txt\nrequired\n\n\nkeyword\nstr\nThe keyword to search for. Must be non-empty string containing only letters and spaces (UTF-8 Unicode letters allowed).\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\n0-based character index of the first match in the file text, or -1\nif not found.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input_path or keyword is not a string.\n\n\n\nValueError\nIf input_path is not a .txt file, or keyword is invalid.\n\n\n\nFileNotFoundError\nIf the input file does not exist.\n\n\n\nOSError\nIf there is an error reading the file.\n\n\n\n\n\n\n&gt;&gt;&gt; text_find(\"example.txt\", \"hello\")\n0\n# Returns 0 if \"hello\" appears at start of example\n&gt;&gt;&gt; text_find(\"example.txt\", \"world\")\n6\n# Returns 6 if \"world\" appears at character index 6\n&gt;&gt;&gt; text_find(\"example.txt\", \"missing\")\n-1\n# Returns -1 if \"missing\" is not found in example.txt",
-    "crumbs": [
-      "Tutorial",
-      "References",
-      "text_find"
-    ]
-  },
-  {
-    "objectID": "reference/text_find.html#functions",
-    "href": "reference/text_find.html#functions",
-    "title": "text_find",
-    "section": "",
-    "text": "Name\nDescription\n\n\n\n\ntext_find\nFinds the first whole-word instance of keyword in a text file.\n\n\n\n\n\ntext_find.text_find(input_path, keyword)\nFinds the first whole-word instance of keyword in a text file.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ninput_path\nstr\nPath to the input text file. Must be a string ending with .txt\nrequired\n\n\nkeyword\nstr\nThe keyword to search for. Must be non-empty string containing only letters and spaces (UTF-8 Unicode letters allowed).\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\n0-based character index of the first match in the file text, or -1\nif not found.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input_path or keyword is not a string.\n\n\n\nValueError\nIf input_path is not a .txt file, or keyword is invalid.\n\n\n\nFileNotFoundError\nIf the input file does not exist.\n\n\n\nOSError\nIf there is an error reading the file.\n\n\n\n\n\n\n&gt;&gt;&gt; text_find(\"example.txt\", \"hello\")\n0\n# Returns 0 if \"hello\" appears at start of example\n&gt;&gt;&gt; text_find(\"example.txt\", \"world\")\n6\n# Returns 6 if \"world\" appears at character index 6\n&gt;&gt;&gt; text_find(\"example.txt\", \"missing\")\n-1\n# Returns -1 if \"missing\" is not found in example.txt",
-    "crumbs": [
-      "Tutorial",
-      "References",
-      "text_find"
     ]
   },
   {
@@ -234,7 +126,7 @@
     "section": "",
     "text": "text_remove\nA module that provides functionality to remove a specified word from a text file.\n\n\n\n\n\nName\nDescription\n\n\n\n\ntext_remove\nRemove all occurrences of a whole word from a text file and write to a new file.\n\n\n\n\n\ntext_remove.text_remove(input_path, output_path, string_to_remove)\nRemove all occurrences of a whole word from a text file and write to a new file.\nThe function reads the input file using UTF-8 encoding, removes every occurrence of string_to_remove as a whole word (not as a substring), and writes the resulting text to the output file using UTF-8 encoding.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ninput_path\nstr\nPath to the input text file. Must be a string ending with .txt.\nrequired\n\n\noutput_path\nstr\nPath to write the processed text file. Must be a string ending with .txt. If input_path and output_path are the same, the input file will be overwritten.\nrequired\n\n\nstring_to_remove\nstr\nThe word to remove from the input text. Must be a non-empty string.\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nNone\nWrites output to file and returns None.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input_path or output_path is not a string, or if string_to_remove is not a string.\n\n\n\nValueError\nIf a path does not end with .txt or if string_to_remove is empty.\n\n\n\nFileNotFoundError\nIf the input file does not exist, or if the output directory does not exist.\n\n\n\nOSError\nIf an error occurs during file reading/writing.\n\n\n\n\n\n\n&gt;&gt;&gt; text_remove(\"example.txt\", \"removed.txt\", \"the\")",
     "crumbs": [
-      "Tutorial",
+      "Home",
       "References",
       "text_remove"
     ]
@@ -246,24 +138,148 @@
     "section": "",
     "text": "Name\nDescription\n\n\n\n\ntext_remove\nRemove all occurrences of a whole word from a text file and write to a new file.\n\n\n\n\n\ntext_remove.text_remove(input_path, output_path, string_to_remove)\nRemove all occurrences of a whole word from a text file and write to a new file.\nThe function reads the input file using UTF-8 encoding, removes every occurrence of string_to_remove as a whole word (not as a substring), and writes the resulting text to the output file using UTF-8 encoding.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ninput_path\nstr\nPath to the input text file. Must be a string ending with .txt.\nrequired\n\n\noutput_path\nstr\nPath to write the processed text file. Must be a string ending with .txt. If input_path and output_path are the same, the input file will be overwritten.\nrequired\n\n\nstring_to_remove\nstr\nThe word to remove from the input text. Must be a non-empty string.\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nNone\nWrites output to file and returns None.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input_path or output_path is not a string, or if string_to_remove is not a string.\n\n\n\nValueError\nIf a path does not end with .txt or if string_to_remove is empty.\n\n\n\nFileNotFoundError\nIf the input file does not exist, or if the output directory does not exist.\n\n\n\nOSError\nIf an error occurs during file reading/writing.\n\n\n\n\n\n\n&gt;&gt;&gt; text_remove(\"example.txt\", \"removed.txt\", \"the\")",
     "crumbs": [
-      "Tutorial",
+      "Home",
       "References",
       "text_remove"
     ]
   },
   {
-    "objectID": "tutorial.html",
-    "href": "tutorial.html",
-    "title": "text_processor Tutorial",
+    "objectID": "reference/text_find.html",
+    "href": "reference/text_find.html",
+    "title": "text_find",
     "section": "",
-    "text": "For this tutorial, we will be working with a text file containing Edgar Allan Poe’s famous poem, Annabel Lee. This file can be found in our tests repository with the file path tests/poe.txt.\n\n\nFirst, we want to check if this text file contains our keyword of interest, “sea”. To do this, we use text_find():\n\nfrom text_processor.text_find import text_find\n\ntext_find(\"tests/poe.txt\", \"sea\")\n\n56\n\n\nThe function returns a non-negative integer, 56. This tells us that the keyword “sea” exists in the text file and that it is the 56th character in the file.\n\n\n\nWe want to do some text processing so that we can identify all of the keywords in the file for model training later. To do that, we first need to be able to identify unique keywords regardless of case, so we use text_lower() to change all the text to lower case.\n\nfrom text_processor.text_lower import text_lower\n\ntext_lower(\"tests/poe.txt\", \"tests/output.txt\")\n\n\n\n\nNext, we want to remove some stop words that we are not interested in from the text. We do not want to see “the” and “a” as keywords, so we remove them using text_remove().\n\nfrom text_processor.text_remove import text_remove\n\ntext_remove(\"tests/output.txt\", \"tests/output.txt\", \"the\")\ntext_remove(\"tests/output.txt\", \"tests/output.txt\", \"a\")\n\n\n\n\nOne more thing - in this poem, Poe uses the word “sepulchre”, which is a British English spelling. However, the rest of our text files are written using American English. Therefore, we want the American English spelling of the word, which is “sepulcher”: we change this by using text_replace().\n\nfrom text_processor.text_replace import text_replace\n\ntext_replace(\"tests/output.txt\", \"tests/output.txt\", \"sepulchre\", \"sepulcher\")\n\n\n\n\nWe now have a text file output.txt with the following processed text:\n\nwith open(\"tests/output.txt\", \"r\", encoding='utf-8') as f:\n        result = f.read()\n\nprint(result)\n\nit was many and many  year ago,\n   in  kingdom by  sea,\nthat  maiden there lived whom you may know\n   by  name of annabel lee;\nand this maiden she lived with no other thought\n   than to love and be loved by me.\n\ni was  child and she was  child,\n   in this kingdom by  sea,\nbut we loved with  love that was more than love—\n   i and my annabel lee—\nwith  love that  wingèd seraphs of heaven\n   coveted her and me.\n\nand this was  reason that, long ago,\n   in this kingdom by  sea,\n wind blew out of  cloud, chilling\n   my beautiful annabel lee;\nso that her highborn kinsmen came\n   and bore her away from me,\nto shut her up in  sepulcher\n   in this kingdom by  sea.\n\n angels, not half so happy in heaven,\n   went envying her and me-\nyes!—that was  reason (as all men know,\n   in this kingdom by  sea)\nthat  wind came out of  cloud by night,\n   chilling and killing my annabel lee.\n\nbut our love it was stronger by far than  love\n   of those who were older than we—\n   of many far wiser than we—\nand neither  angels in heaven above\n   nor  demons down under  sea\ncan ever dissever my soul from  soul\n   of  beautiful annabel lee;\n\nfor  moon never beams, without bringing me dreams\n   of  beautiful annabel lee;\nand  stars never rise, but i feel  bright eyes\n   of  beautiful annabel lee;\nand so, all  night-tide, i lie down by  side\n   of my darling—my darling—my life and my bride,\n   in her sepulcher there by  sea—\n   in her tomb by  sounding sea."
+    "text": "text_find\nA module that reads a text file to locate the first occurrence of ‘keyword’ in text and returns its character index.\nNote: The returned index refers to the text read from the processed file (e.g., lowercased / cleaned by earlier steps), not the raw file text.\n\n\n\n\n\nName\nDescription\n\n\n\n\ntext_find\nFinds the first whole-word instance of keyword in a text file.\n\n\n\n\n\ntext_find.text_find(input_path, keyword)\nFinds the first whole-word instance of keyword in a text file.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ninput_path\nstr\nPath to the input text file. Must be a string ending with .txt\nrequired\n\n\nkeyword\nstr\nThe keyword to search for. Must be non-empty string containing only letters and spaces (UTF-8 Unicode letters allowed).\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\n0-based character index of the first match in the file text, or -1\nif not found.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input_path or keyword is not a string.\n\n\n\nValueError\nIf input_path is not a .txt file, or keyword is invalid.\n\n\n\nFileNotFoundError\nIf the input file does not exist.\n\n\n\nOSError\nIf there is an error reading the file.\n\n\n\n\n\n\n&gt;&gt;&gt; text_find(\"example.txt\", \"hello\")\n0\n# Returns 0 if \"hello\" appears at start of example\n&gt;&gt;&gt; text_find(\"example.txt\", \"world\")\n6\n# Returns 6 if \"world\" appears at character index 6\n&gt;&gt;&gt; text_find(\"example.txt\", \"missing\")\n-1\n# Returns -1 if \"missing\" is not found in example.txt",
+    "crumbs": [
+      "Home",
+      "References",
+      "text_find"
+    ]
   },
   {
-    "objectID": "tutorial.html#using-text_processor",
-    "href": "tutorial.html#using-text_processor",
-    "title": "text_processor Tutorial",
+    "objectID": "reference/text_find.html#functions",
+    "href": "reference/text_find.html#functions",
+    "title": "text_find",
     "section": "",
-    "text": "For this tutorial, we will be working with a text file containing Edgar Allan Poe’s famous poem, Annabel Lee. This file can be found in our tests repository with the file path tests/poe.txt.\n\n\nFirst, we want to check if this text file contains our keyword of interest, “sea”. To do this, we use text_find():\n\nfrom text_processor.text_find import text_find\n\ntext_find(\"tests/poe.txt\", \"sea\")\n\n56\n\n\nThe function returns a non-negative integer, 56. This tells us that the keyword “sea” exists in the text file and that it is the 56th character in the file.\n\n\n\nWe want to do some text processing so that we can identify all of the keywords in the file for model training later. To do that, we first need to be able to identify unique keywords regardless of case, so we use text_lower() to change all the text to lower case.\n\nfrom text_processor.text_lower import text_lower\n\ntext_lower(\"tests/poe.txt\", \"tests/output.txt\")\n\n\n\n\nNext, we want to remove some stop words that we are not interested in from the text. We do not want to see “the” and “a” as keywords, so we remove them using text_remove().\n\nfrom text_processor.text_remove import text_remove\n\ntext_remove(\"tests/output.txt\", \"tests/output.txt\", \"the\")\ntext_remove(\"tests/output.txt\", \"tests/output.txt\", \"a\")\n\n\n\n\nOne more thing - in this poem, Poe uses the word “sepulchre”, which is a British English spelling. However, the rest of our text files are written using American English. Therefore, we want the American English spelling of the word, which is “sepulcher”: we change this by using text_replace().\n\nfrom text_processor.text_replace import text_replace\n\ntext_replace(\"tests/output.txt\", \"tests/output.txt\", \"sepulchre\", \"sepulcher\")\n\n\n\n\nWe now have a text file output.txt with the following processed text:\n\nwith open(\"tests/output.txt\", \"r\", encoding='utf-8') as f:\n        result = f.read()\n\nprint(result)\n\nit was many and many  year ago,\n   in  kingdom by  sea,\nthat  maiden there lived whom you may know\n   by  name of annabel lee;\nand this maiden she lived with no other thought\n   than to love and be loved by me.\n\ni was  child and she was  child,\n   in this kingdom by  sea,\nbut we loved with  love that was more than love—\n   i and my annabel lee—\nwith  love that  wingèd seraphs of heaven\n   coveted her and me.\n\nand this was  reason that, long ago,\n   in this kingdom by  sea,\n wind blew out of  cloud, chilling\n   my beautiful annabel lee;\nso that her highborn kinsmen came\n   and bore her away from me,\nto shut her up in  sepulcher\n   in this kingdom by  sea.\n\n angels, not half so happy in heaven,\n   went envying her and me-\nyes!—that was  reason (as all men know,\n   in this kingdom by  sea)\nthat  wind came out of  cloud by night,\n   chilling and killing my annabel lee.\n\nbut our love it was stronger by far than  love\n   of those who were older than we—\n   of many far wiser than we—\nand neither  angels in heaven above\n   nor  demons down under  sea\ncan ever dissever my soul from  soul\n   of  beautiful annabel lee;\n\nfor  moon never beams, without bringing me dreams\n   of  beautiful annabel lee;\nand  stars never rise, but i feel  bright eyes\n   of  beautiful annabel lee;\nand so, all  night-tide, i lie down by  side\n   of my darling—my darling—my life and my bride,\n   in her sepulcher there by  sea—\n   in her tomb by  sounding sea."
+    "text": "Name\nDescription\n\n\n\n\ntext_find\nFinds the first whole-word instance of keyword in a text file.\n\n\n\n\n\ntext_find.text_find(input_path, keyword)\nFinds the first whole-word instance of keyword in a text file.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ninput_path\nstr\nPath to the input text file. Must be a string ending with .txt\nrequired\n\n\nkeyword\nstr\nThe keyword to search for. Must be non-empty string containing only letters and spaces (UTF-8 Unicode letters allowed).\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\n0-based character index of the first match in the file text, or -1\nif not found.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input_path or keyword is not a string.\n\n\n\nValueError\nIf input_path is not a .txt file, or keyword is invalid.\n\n\n\nFileNotFoundError\nIf the input file does not exist.\n\n\n\nOSError\nIf there is an error reading the file.\n\n\n\n\n\n\n&gt;&gt;&gt; text_find(\"example.txt\", \"hello\")\n0\n# Returns 0 if \"hello\" appears at start of example\n&gt;&gt;&gt; text_find(\"example.txt\", \"world\")\n6\n# Returns 6 if \"world\" appears at character index 6\n&gt;&gt;&gt; text_find(\"example.txt\", \"missing\")\n-1\n# Returns -1 if \"missing\" is not found in example.txt",
+    "crumbs": [
+      "Home",
+      "References",
+      "text_find"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to Text Processor",
+    "section": "",
+    "text": "Package\n \n\n\nMeta\n\n\n\n\ntext_processor is a package that assists in the processing of text files in Python. This allows users to generate insights on and clean raw text data without needing to manually read the file or write the text to a new file, and is particularly useful in cases where users only need to perform a simple operation on the text file.\nThe package consists of the following functions:\n\ntext_lower:\n\nThis function converts all characters in a text file to lower case and writes it to a specified file.\n\ntext_find:\n\nThis function finds the index of the first instance of a specified string in a text file. If the string does not exist in the file, it will return -1.\n\ntext_remove:\n\nThis function removes all instances of a specified string in a text file, then writes it to a new file.\n\ntext_replace:\n\nThis function replaces all instances of a specified string in a text file with another string, then writes it to a new file.\n\n\n\n\nThe functions in text_processor are analogous to built-in string methods in the Python standard library such as str.lower(), str.find(), and str.replace(). They are differentiated by how they are built to handle text files specifically, directly reading from and writing to files rather than working directly with the text as strings.\n\n\n\nOur online documentation can be found here.\n\n\n\n\n\nClone this GitHub repository and navigate to the project folder using the following commands:\ngit clone https://github.com/UBC-MDS/dsci_524_group28_text_processor.git\ncd dsci_524_group28_text_processor\n\n\n\nCreate and activate the development environment using the environment.yml file:\nconda env create -f environment.yml\nconda activate 524\n\n\n\nTo install the package locally for testing, use the following command while in the root directory:\npip install -e .\nTo instead install the package from TestPyPI, use the following command:\npip install -i https://test.pypi.org/simple/ text-processor\n\n\n\nRun the tests using the following command while in the root directory:\npytest\n\n\n\nAfter installing text_processor, the documentation can be built using Hatch with the following command:\nquartodoc build\n\n\n\nThe documentation is automatically rendered and deployed once updates are pushed to the deployment branch.\n\n\n\n\n\nAitong Wu\nChristine Chow\nJulia Zhang\nVy Phan\n\n\n\n\n\nCopyright © 2026 Julia Zhang, Vy Phan, Aitong Wu, Christine Chow.\nFree software distributed under the MIT License."
+  },
+  {
+    "objectID": "index.html#text_processor-in-the-python-ecosystem",
+    "href": "index.html#text_processor-in-the-python-ecosystem",
+    "title": "Welcome to Text Processor",
+    "section": "",
+    "text": "The functions in text_processor are analogous to built-in string methods in the Python standard library such as str.lower(), str.find(), and str.replace(). They are differentiated by how they are built to handle text files specifically, directly reading from and writing to files rather than working directly with the text as strings."
+  },
+  {
+    "objectID": "index.html#documentation",
+    "href": "index.html#documentation",
+    "title": "Welcome to Text Processor",
+    "section": "",
+    "text": "Our online documentation can be found here."
+  },
+  {
+    "objectID": "index.html#get-started",
+    "href": "index.html#get-started",
+    "title": "Welcome to Text Processor",
+    "section": "",
+    "text": "Clone this GitHub repository and navigate to the project folder using the following commands:\ngit clone https://github.com/UBC-MDS/dsci_524_group28_text_processor.git\ncd dsci_524_group28_text_processor\n\n\n\nCreate and activate the development environment using the environment.yml file:\nconda env create -f environment.yml\nconda activate 524\n\n\n\nTo install the package locally for testing, use the following command while in the root directory:\npip install -e .\nTo instead install the package from TestPyPI, use the following command:\npip install -i https://test.pypi.org/simple/ text-processor\n\n\n\nRun the tests using the following command while in the root directory:\npytest\n\n\n\nAfter installing text_processor, the documentation can be built using Hatch with the following command:\nquartodoc build\n\n\n\nThe documentation is automatically rendered and deployed once updates are pushed to the deployment branch."
+  },
+  {
+    "objectID": "index.html#contributors",
+    "href": "index.html#contributors",
+    "title": "Welcome to Text Processor",
+    "section": "",
+    "text": "Aitong Wu\nChristine Chow\nJulia Zhang\nVy Phan"
+  },
+  {
+    "objectID": "index.html#copyright",
+    "href": "index.html#copyright",
+    "title": "Welcome to Text Processor",
+    "section": "",
+    "text": "Copyright © 2026 Julia Zhang, Vy Phan, Aitong Wu, Christine Chow.\nFree software distributed under the MIT License."
+  },
+  {
+    "objectID": "reference/index.html",
+    "href": "reference/index.html",
+    "title": "Function reference",
+    "section": "",
+    "text": "Functions to help you process text\n\n\n\ntext_find\nA module that reads a text file to locate the first occurrence of ‘keyword’ in text\n\n\ntext_lower\nA module that reads a UTF-8 text file, converts all uppercase characters to lowercase,\n\n\ntext_remove\nA module that provides functionality to remove a specified word from a text file.\n\n\ntext_replace\nA module that reads a text file, replaces all instances of a string",
+    "crumbs": [
+      "Home",
+      "References",
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/index.html#main-api",
+    "href": "reference/index.html#main-api",
+    "title": "Function reference",
+    "section": "",
+    "text": "Functions to help you process text\n\n\n\ntext_find\nA module that reads a text file to locate the first occurrence of ‘keyword’ in text\n\n\ntext_lower\nA module that reads a UTF-8 text file, converts all uppercase characters to lowercase,\n\n\ntext_remove\nA module that provides functionality to remove a specified word from a text file.\n\n\ntext_replace\nA module that reads a text file, replaces all instances of a string",
+    "crumbs": [
+      "Home",
+      "References",
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/text_lower.html",
+    "href": "reference/text_lower.html",
+    "title": "text_lower",
+    "section": "",
+    "text": "text_lower\nA module that reads a UTF-8 text file, converts all uppercase characters to lowercase, then writes the output to a new file.\n\n\n\n\n\nName\nDescription\n\n\n\n\ntext_lower\nConverts all characters in a text file to lowercase, then writes the result into\n\n\n\n\n\ntext_lower.text_lower(input_path, output_path)\nConverts all characters in a text file to lowercase, then writes the result into another file. If empty input file is provided, it will create an empty output file.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ninput_path\nstr\nPath to the input text file. Must be a string ending with .txt\nrequired\n\n\noutput_path\nstr\nPath to write the processed text file. Must be a string ending with .txt. If input and output paths are the same, the input file will be overwritten.\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nNone\nFunction writes directly to a UTF-8 file and returns None.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input_path or output_path is not a string.\n\n\n\nValueError\nIf input_path or output_path does not have a .txt file extension.\n\n\n\nFileNotFoundError\nIf the input file does not exist.\n\n\n\nOSError\nIf there is an error reading from or writing to the file.\n\n\n\n\n\n\n&gt;&gt;&gt; text_lower(\"example.txt\", \"example_lower.txt\")\n# example_lower.txt contains the contents of example.txt, but with all\n# instances of uppercase characters replaced with lowercase equivalents",
+    "crumbs": [
+      "Home",
+      "References",
+      "text_lower"
+    ]
+  },
+  {
+    "objectID": "reference/text_lower.html#functions",
+    "href": "reference/text_lower.html#functions",
+    "title": "text_lower",
+    "section": "",
+    "text": "Name\nDescription\n\n\n\n\ntext_lower\nConverts all characters in a text file to lowercase, then writes the result into\n\n\n\n\n\ntext_lower.text_lower(input_path, output_path)\nConverts all characters in a text file to lowercase, then writes the result into another file. If empty input file is provided, it will create an empty output file.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ninput_path\nstr\nPath to the input text file. Must be a string ending with .txt\nrequired\n\n\noutput_path\nstr\nPath to write the processed text file. Must be a string ending with .txt. If input and output paths are the same, the input file will be overwritten.\nrequired\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nNone\nFunction writes directly to a UTF-8 file and returns None.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input_path or output_path is not a string.\n\n\n\nValueError\nIf input_path or output_path does not have a .txt file extension.\n\n\n\nFileNotFoundError\nIf the input file does not exist.\n\n\n\nOSError\nIf there is an error reading from or writing to the file.\n\n\n\n\n\n\n&gt;&gt;&gt; text_lower(\"example.txt\", \"example_lower.txt\")\n# example_lower.txt contains the contents of example.txt, but with all\n# instances of uppercase characters replaced with lowercase equivalents",
+    "crumbs": [
+      "Home",
+      "References",
+      "text_lower"
+    ]
+  },
+  {
+    "objectID": "reference/text_replace.html",
+    "href": "reference/text_replace.html",
+    "title": "text_replace",
+    "section": "",
+    "text": "text_replace\nA module that reads a text file, replaces all instances of a string with another string, then writes the output to a new file.\n\n\n\n\n\nName\nDescription\n\n\n\n\ntext_replace\nReplaces all instances of a string with another string in a text\n\n\n\n\n\ntext_replace.text_replace(input_path, output_path, old, new)\nReplaces all instances of a string with another string in a text file, then writes the result into another file. If the old string does not exist in the file, then the output will be the same unaltered file.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ninput_path\nstr\nAn existing file path to the text file to read. The file must be readable.\nrequired\n\n\noutput_path\nstr\nThe file path to write the replaced text to. The file, should it exist, must be writeable.\nrequired\n\n\nold\nstr\nA (non-empty) string to replace.\nrequired\n\n\nnew\nstr\nThe replacement string.\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nNone\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input_path, output_path, old, or new is not a string.\n\n\n\nValueError\nIf old is an empty string, or the input_path or output_path are not paths to .txt files.\n\n\n\n\n\n\n&gt;&gt;&gt; text_replace(\"example.txt\", \"replaced.txt\", \"color\", \"colour\")\n# replaced.txt contains the contents of example.txt, but with all\n# instances of 'color' replaced with \"colour\"",
+    "crumbs": [
+      "Home",
+      "References",
+      "text_replace"
+    ]
+  },
+  {
+    "objectID": "reference/text_replace.html#functions",
+    "href": "reference/text_replace.html#functions",
+    "title": "text_replace",
+    "section": "",
+    "text": "Name\nDescription\n\n\n\n\ntext_replace\nReplaces all instances of a string with another string in a text\n\n\n\n\n\ntext_replace.text_replace(input_path, output_path, old, new)\nReplaces all instances of a string with another string in a text file, then writes the result into another file. If the old string does not exist in the file, then the output will be the same unaltered file.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ninput_path\nstr\nAn existing file path to the text file to read. The file must be readable.\nrequired\n\n\noutput_path\nstr\nThe file path to write the replaced text to. The file, should it exist, must be writeable.\nrequired\n\n\nold\nstr\nA (non-empty) string to replace.\nrequired\n\n\nnew\nstr\nThe replacement string.\nrequired\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nNone\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input_path, output_path, old, or new is not a string.\n\n\n\nValueError\nIf old is an empty string, or the input_path or output_path are not paths to .txt files.\n\n\n\n\n\n\n&gt;&gt;&gt; text_replace(\"example.txt\", \"replaced.txt\", \"color\", \"colour\")\n# replaced.txt contains the contents of example.txt, but with all\n# instances of 'color' replaced with \"colour\"",
+    "crumbs": [
+      "Home",
+      "References",
+      "text_replace"
+    ]
   },
   {
     "objectID": "CODE_OF_CONDUCT.html",
@@ -272,7 +288,7 @@
     "section": "",
     "text": "We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.\nWe pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.\n\n\n\nExamples of behavior that contributes to a positive environment for our community include:\n\nDemonstrating empathy and kindness toward other people\nBeing respectful of differing opinions, viewpoints, and experiences\nGiving and gracefully accepting constructive feedback\nAccepting responsibility and apologizing to those affected by our mistakes, and learning from the experience\nFocusing on what is best not just for us as individuals, but for the overall community\n\nExamples of unacceptable behavior include:\n\nThe use of sexualized language or imagery, and sexual attention or advances of any kind\nTrolling, insulting or derogatory comments, and personal or political attacks\nPublic or private harassment\nPublishing others’ private information, such as a physical or email address, without their explicit permission\nOther conduct which could reasonably be considered inappropriate in a professional setting\n\n\n\n\nCommunity leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.\nCommunity leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.\n\n\n\nThis Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.\n\n\n\nInstances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting Christine Chow at chrchow@student.ubc.ca Community leaders will review and investigate all complaints, and will respond in a way that it deems appropriate to the circumstances. Community leaders are obligated to respect the privacy and security of the reporter of any incident.\n\n\n\nCommunity leaders will follow these Community Impact Guidelines in determining the consequences for any action they deem in violation of this Code of Conduct:\n\n\nCommunity Impact: Use of inappropriate language or other behavior deemed unprofessional or unwelcome in the community.\nConsequence: A private, written warning from community leaders, providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate. A public apology may be requested.\n\n\n\nCommunity Impact: A violation through a single incident or series of actions.\nConsequence: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.\n\n\n\nCommunity Impact: A serious violation of community standards, including sustained inappropriate behavior.\nConsequence: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban.\n\n\n\nCommunity Impact: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.\nConsequence: A permanent ban from any sort of public interaction within the community.\n\n\n\n\nThis Code of Conduct is adapted from the Contributor Covenant, version 2.0, available at https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.\nCommunity Impact Guidelines were inspired by Mozilla’s code of conduct enforcement ladder.\nFor answers to common questions about this code of conduct, see the FAQ at https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations.",
     "crumbs": [
-      "Tutorial",
+      "Home",
       "Getting Started",
       "Contributor Covenant Code of Conduct"
     ]
@@ -284,7 +300,7 @@
     "section": "",
     "text": "We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.\nWe pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.",
     "crumbs": [
-      "Tutorial",
+      "Home",
       "Getting Started",
       "Contributor Covenant Code of Conduct"
     ]
@@ -296,7 +312,7 @@
     "section": "",
     "text": "Examples of behavior that contributes to a positive environment for our community include:\n\nDemonstrating empathy and kindness toward other people\nBeing respectful of differing opinions, viewpoints, and experiences\nGiving and gracefully accepting constructive feedback\nAccepting responsibility and apologizing to those affected by our mistakes, and learning from the experience\nFocusing on what is best not just for us as individuals, but for the overall community\n\nExamples of unacceptable behavior include:\n\nThe use of sexualized language or imagery, and sexual attention or advances of any kind\nTrolling, insulting or derogatory comments, and personal or political attacks\nPublic or private harassment\nPublishing others’ private information, such as a physical or email address, without their explicit permission\nOther conduct which could reasonably be considered inappropriate in a professional setting",
     "crumbs": [
-      "Tutorial",
+      "Home",
       "Getting Started",
       "Contributor Covenant Code of Conduct"
     ]
@@ -308,7 +324,7 @@
     "section": "",
     "text": "Community leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.\nCommunity leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.",
     "crumbs": [
-      "Tutorial",
+      "Home",
       "Getting Started",
       "Contributor Covenant Code of Conduct"
     ]
@@ -320,7 +336,7 @@
     "section": "",
     "text": "This Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.",
     "crumbs": [
-      "Tutorial",
+      "Home",
       "Getting Started",
       "Contributor Covenant Code of Conduct"
     ]
@@ -332,7 +348,7 @@
     "section": "",
     "text": "Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting Christine Chow at chrchow@student.ubc.ca Community leaders will review and investigate all complaints, and will respond in a way that it deems appropriate to the circumstances. Community leaders are obligated to respect the privacy and security of the reporter of any incident.",
     "crumbs": [
-      "Tutorial",
+      "Home",
       "Getting Started",
       "Contributor Covenant Code of Conduct"
     ]
@@ -344,7 +360,7 @@
     "section": "",
     "text": "Community leaders will follow these Community Impact Guidelines in determining the consequences for any action they deem in violation of this Code of Conduct:\n\n\nCommunity Impact: Use of inappropriate language or other behavior deemed unprofessional or unwelcome in the community.\nConsequence: A private, written warning from community leaders, providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate. A public apology may be requested.\n\n\n\nCommunity Impact: A violation through a single incident or series of actions.\nConsequence: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.\n\n\n\nCommunity Impact: A serious violation of community standards, including sustained inappropriate behavior.\nConsequence: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban.\n\n\n\nCommunity Impact: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.\nConsequence: A permanent ban from any sort of public interaction within the community.",
     "crumbs": [
-      "Tutorial",
+      "Home",
       "Getting Started",
       "Contributor Covenant Code of Conduct"
     ]
@@ -356,7 +372,7 @@
     "section": "",
     "text": "This Code of Conduct is adapted from the Contributor Covenant, version 2.0, available at https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.\nCommunity Impact Guidelines were inspired by Mozilla’s code of conduct enforcement ladder.\nFor answers to common questions about this code of conduct, see the FAQ at https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations.",
     "crumbs": [
-      "Tutorial",
+      "Home",
       "Getting Started",
       "Contributor Covenant Code of Conduct"
     ]
@@ -368,7 +384,7 @@
     "section": "",
     "text": "MIT License\nCopyright (c) 2026 Julia Zhang, Vy Phan, Aitong Wu, Christine Chow\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice (including the next paragraph) shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "crumbs": [
-      "Tutorial",
+      "Home",
       "Getting Started",
       "LICENSE"
     ]
