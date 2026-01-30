@@ -1,7 +1,9 @@
 on:
   workflow_dispatch:
+  push:
+    branches: [ main ] # site updates when you merge
   pull_request:
-    branches: [ main ]
+    branches: [ main ] # tests build during PR phase
 
 name: Render and Publish docs
 
