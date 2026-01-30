@@ -1,0 +1,61 @@
+---
+title: "text_processor Tutorial"
+---
+
+## Using `text_processor`
+
+For this tutorial, we will be working with a text file containing Edgar Allan Poe's famous poem, Annabel Lee. This file can be found in our tests repository with the file path `tests/poe.txt`.
+
+#### `text_find()`
+
+First, we want to check if this text file contains our keyword of interest, "sea". To do this, we use `text_find()`:
+
+```{python}
+from text_processor.text_find import text_find
+
+text_find("tests/poe.txt", "sea")
+```
+
+The function returns a non-negative integer, 56. This tells us that the keyword "sea" exists in the text file and that it is the 56th character in the file.
+
+#### `text_lower()`
+
+We want to do some text processing so that we can identify all of the keywords in the file for model training later. To do that, we first need to be able to identify unique keywords regardless of case, so we use `text_lower()` to change all the text to lower case.
+
+```{python}
+from text_processor.text_lower import text_lower
+
+text_lower("tests/poe.txt", "tests/output.txt")
+```
+
+#### `text_remove()`
+
+Next, we want to remove some stop words that we are not interested in from the text. We do not want to see "the" and "a" as keywords, so we remove them using `text_remove()`.
+
+```{python}
+from text_processor.text_remove import text_remove
+
+text_remove("tests/output.txt", "tests/output.txt", "the")
+text_remove("tests/output.txt", "tests/output.txt", "a")
+```
+
+#### `text_replace()`
+
+One more thing - in this poem, Poe uses the word "sepulchre", which is a British English spelling. However, the rest of our text files are written using American English. Therefore, we want the American English spelling of the word, which is "sepulcher": we change this by using `text_replace()`.
+
+```{python}
+from text_processor.text_replace import text_replace
+
+text_replace("tests/output.txt", "tests/output.txt", "sepulchre", "sepulcher")
+```
+
+### Final output
+
+We now have a text file `output.txt` with the following processed text:
+
+```{python}
+with open("tests/output.txt", "r", encoding='utf-8') as f:
+        result = f.read()
+
+print(result)
+```
