@@ -13,7 +13,7 @@ requires = ["hatchling"]
 [project]
 name = "text_processor"
 # You can chose to use dynamic versioning with hatch or static where you add it manually.
-version = "0.1.1"
+dynamic = ["version"]
 
 description = """
 A Python package for basic text processing tasks such as cleaning, tokenization, and
@@ -88,6 +88,8 @@ only-packages = true
 [tool.hatch.build.targets.wheel]
 packages = ["src/text_processor"]
 
+[tool.hatch.version]
+path = "src/text_processor/__init__.py"
 
 
 ######## Configure pytest for your test suite ########
