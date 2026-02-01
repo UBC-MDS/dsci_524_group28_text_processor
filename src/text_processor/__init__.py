@@ -22,8 +22,15 @@
 # SOFTWARE.
 
 """
-Add a docstring here for the init module.
+Text Processor Package.
 
-This might include a very brief description of the package,
-its purpose, and any important notes.
+This package provides basic utilities for processing text files.
+It supports reading text from files, normalizing text by converting
+it to lowercase for consistency, removing specified substrings,
+and replacing the first occurrence of a target keyword with a
+user-defined replacement word.
+
+The package is designed to be simple and easy to use for basic text preprocessing tasks.
 """
+
+__version__ = "0.1.2"
