@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "text_processor"
+type: software
+authors:
+  - family-names: "Wu"
+    given-names: "Aitong"
+    email: "at897175@dal.ca"
+  - family-names: "Chow"
+    given-names: "Christine"
+  - family-names: "Zhang"
+    given-names: "Julia"
+  - family-names: "Phan"
+    given-names: "Vy"
+version: "0.0.4"
+date-released: "2026-02-01"
+url: "https://github.com/UBC-MDS/dsci_524_group28_text_processor"
+license: "MIT"
