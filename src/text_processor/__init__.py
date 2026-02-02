@@ -32,5 +32,3 @@ user-defined replacement word.
 
 The package is designed to be simple and easy to use for basic text preprocessing tasks.
 """
-
-__version__ = "0.1.3"
