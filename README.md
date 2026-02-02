@@ -93,3 +93,7 @@ The functions in `text_processor` are analogous to built-in string methods in th
 
 - Copyright © 2026 Julia Zhang, Vy Phan, Aitong Wu, Christine Chow.
 - Free software distributed under the [MIT License](./LICENSE).
+
+## Citation
+
+- Please see `CITATION.cff`.
