@@ -273,7 +273,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="text_find" class="level4">
 <h4 class="anchored" data-anchor-id="text_find"><code>text_find()</code></h4>
 <p>First, we want to check if this text file contains our keyword of interest, “sea”. To do this, we use <code>text_find()</code>:</p>
-<div id="8b9fa506" class="cell" data-execution_count="1">
+<div id="d7c3662b" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> text_processor.text_find <span class="im">import</span> text_find</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>text_find(<span class="st">"tests/poe.txt"</span>, <span class="st">"sea"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -286,7 +286,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="text_lower" class="level4">
 <h4 class="anchored" data-anchor-id="text_lower"><code>text_lower()</code></h4>
 <p>We want to do some text processing so that we can identify all of the keywords in the file for model training later. To do that, we first need to be able to identify unique keywords regardless of case, so we use <code>text_lower()</code> to change all the text to lower case.</p>
-<div id="ca5771f8" class="cell" data-execution_count="2">
+<div id="fd49df5f" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> text_processor.text_lower <span class="im">import</span> text_lower</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>text_lower(<span class="st">"tests/poe.txt"</span>, <span class="st">"tests/output.txt"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -295,7 +295,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="text_remove" class="level4">
 <h4 class="anchored" data-anchor-id="text_remove"><code>text_remove()</code></h4>
 <p>Next, we want to remove some stop words that we are not interested in from the text. We do not want to see “the” and “a” as keywords, so we remove them using <code>text_remove()</code>.</p>
-<div id="93f919f3" class="cell" data-execution_count="3">
+<div id="38b36291" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> text_processor.text_remove <span class="im">import</span> text_remove</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>text_remove(<span class="st">"tests/output.txt"</span>, <span class="st">"tests/output.txt"</span>, <span class="st">"the"</span>)</span>
@@ -305,7 +305,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="text_replace" class="level4">
 <h4 class="anchored" data-anchor-id="text_replace"><code>text_replace()</code></h4>
 <p>One more thing - in this poem, Poe uses the word “sepulchre”, which is a British English spelling. However, the rest of our text files are written using American English. Therefore, we want the American English spelling of the word, which is “sepulcher”: we change this by using <code>text_replace()</code>.</p>
-<div id="a00d2409" class="cell" data-execution_count="4">
+<div id="260def74" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> text_processor.text_replace <span class="im">import</span> text_replace</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>text_replace(<span class="st">"tests/output.txt"</span>, <span class="st">"tests/output.txt"</span>, <span class="st">"sepulchre"</span>, <span class="st">"sepulcher"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -314,7 +314,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="final-output" class="level3">
 <h3 class="anchored" data-anchor-id="final-output">Final output</h3>
 <p>We now have a text file <code>output.txt</code> with the following processed text:</p>
-<div id="0b592be7" class="cell" data-execution_count="5">
+<div id="caeaf27a" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"tests/output.txt"</span>, <span class="st">"r"</span>, encoding<span class="op">=</span><span class="st">'utf-8'</span>) <span class="im">as</span> f:</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> f.read()</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
