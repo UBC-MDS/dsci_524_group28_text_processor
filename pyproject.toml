@@ -4,7 +4,7 @@
 
 [build-system]
 build-backend = "hatchling.build"
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 
 ################################################################################
 # Project Configuration
@@ -89,7 +89,11 @@ only-packages = true
 packages = ["src/text_processor"]
 
 [tool.hatch.version]
-path = "src/text_processor/__init__.py"
+source = "vcs"
+raw-options = {version_scheme = "no-guess-dev", local_scheme = "no-local-version"}
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/text_processor/__version__.py"
 
 
 ######## Configure pytest for your test suite ########
